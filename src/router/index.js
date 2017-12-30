@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld.vue'
 import SignIn from '@/components/SignIn/SignIn.vue'
 import Contacts from '@/components/Contacts/Contacts.vue'
+import Chat from '@/components/Contacts/Chat.vue'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/Contacts',
       name: 'Contacts',
       component: Contacts
+    },
+    {
+      path: '/Chat',
+      name: 'Chat',
+      component: Chat
     }
 
   ]
