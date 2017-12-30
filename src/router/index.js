@@ -28,6 +28,11 @@ export default new Router({
       path: '/Chat',
       name: 'Chat',
       component: Chat
+    },
+    {
+      path: '/Profile',
+      name: 'Profile',
+      component: Profile
     }
 
   ]
