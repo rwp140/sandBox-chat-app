@@ -6,7 +6,7 @@ export default {
   name: 'Contacts',
   data () {
     return {
-      msg: 'Welcome to SignIn'
+      msg: 'Welcome to contacts'
     }
   }
 }
