@@ -3,7 +3,8 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld.vue'
 import SignIn from '@/components/SignIn/SignIn.vue'
 import Contacts from '@/components/Contacts/Contacts.vue'
-import Chat from '@/components/Contacts/Chat.vue'
+import Chat from '@/components/Chat/Chat.vue'
+import Profile from '@/components/Profile/Profile.vue'
 
 Vue.use(Router)
 
