@@ -1,6 +1,11 @@
+#background {
+    background-image: url("sandbox-1583289_1920.jpg");
+}
+
 #title {
     text-align: center;
     margin-top: 5%;
+    background-color: #eeeeee91;
 }
 
 #loginText {
@@ -10,6 +15,8 @@
 
 #wellformat {
     width: 50%;
+    margin-bottom: 25%;
+    background-color: #eeeeee91;
 }
 
 .col-centered{
@@ -28,10 +35,10 @@ form {
 
 #logInButton {
     margin-top: 5%;
-    margin-left: 65%;
+
 }
 
 #signInButton {
     margin-bottom: 10%;
-    margin-right: 65%;
+    
 }
