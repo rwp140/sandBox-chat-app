@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld.vue'
 import SignIn from '@/components/SignIn/SignIn.vue'
+import Contacts from '@/components/Contacts/Contacts.vue'
 
 Vue.use(Router)
 
@@ -16,6 +17,11 @@ export default new Router({
       path: '/',
       name: 'SignIn',
       component: SignIn
+    },
+    {
+      path: '/Contacts',
+      name: 'Contacts',
+      component: Contacts
     }
 
   ]
