@@ -20,14 +20,20 @@ module.exports = {
 //Functions
 
   //public
-  function LogIN(){
+  function LogIN(event){
+     buttonCheck(()=>{
 
+     },event);
   }
-  function OpenForgotUserForm(){
+  function OpenForgotUserForm(event){
+     buttonCheck(()=>{
 
+     },event);
   }
-  function OpenNewUserForm(){
+  function OpenNewUserForm(event){
+     buttonCheck(()=>{
 
+     },event);
   }
   //Private
   function buttonCheck(callBack,event){
