@@ -17,7 +17,7 @@ module.exports = {
     OpenForgotUserForm:OpenForgotUserForm,
     OpenNewUserForm:OpenNewUserForm
   },
-  components: {}
+  components: {}//other components and templates go here
 }
 // Variables
   //public
