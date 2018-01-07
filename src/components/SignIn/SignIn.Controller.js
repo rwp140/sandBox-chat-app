@@ -17,9 +17,14 @@ module.exports = {
   },
   components: {}
 }
+// Variables
+  //public
 //Functions
 
   //public
+  /*
+  * Logs user in
+  */
   function LogIN(event){
      buttonCheck(()=>{
 
@@ -45,6 +50,9 @@ module.exports = {
 
   }
   function InputValidation(){
+  /*
+  * Runs any form validation we need
+  */
 
   }
 
