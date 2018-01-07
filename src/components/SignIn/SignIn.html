@@ -1,5 +1,7 @@
+
 <div id="background">
 <div class="container">
+{{msg}}
 
     <div class="jumbotron" id="title">
 
@@ -18,7 +20,7 @@
                 <form>
 
                     <div>
-                      
+
                         <p>Username:</p>
                         <input type="text" name="username"><br>
 
@@ -35,7 +37,7 @@
 
                     <div>
 
-                        <button id="logInButton" class="btn-success">Log In</button>
+                        <button id="logInButton" class="btn-success" v-on:click="login">Log In</button>
 
                         <button id="signInButton" class="btn-primary">Sign Up</button>
 
@@ -46,7 +48,6 @@
                 </form>
 
             </div>
-
             <div class="col-md-3"></div>
 
         </div>
