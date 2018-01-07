@@ -1,5 +1,5 @@
 #background {
-    background-image: url("sandbox-1583289_1920.jpg");
+    background-image: url("./Images/sandbox-1583289_1920.jpg");
 }
 
 #title {
@@ -40,5 +40,5 @@ form {
 
 #signInButton {
     margin-bottom: 10%;
-    
+
 }
