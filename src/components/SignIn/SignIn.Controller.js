@@ -1,19 +1,15 @@
 //Imports
-
+const srvc = require('./SignIn.Service');
 
 
 //Exports
 module.exports = {
   name: 'SignIn',
   data () {
-    return {
-      msg: 'Welcome to SignIn',//used for testing generally
-      username:username,
-      password:password
-    }
+    return data
   },
   methods: {
-    LogIN: LogIN,
+    LogIn:LogIn,
     OpenForgotUserForm:OpenForgotUserForm,
     OpenNewUserForm:OpenNewUserForm
   },
@@ -21,8 +17,10 @@ module.exports = {
 }
 // Variables
   //public
-  var username = "";
-  var password = "";
+  var data = {};
+  data.msg = "wellcome to sign in."
+  data.username = "";
+  data.password = "";
   //private
 
 //Functions
@@ -31,10 +29,18 @@ module.exports = {
   /*
   * Logs user in
   */
-  function LogIN(event){
+  function LogIn(event){
      buttonCheck(()=>{
-       if(FormValidation())
-        if(InputValidation())
+       let illegalUserChars =['*']
+       let illegalPassChars =['*'];
+       if(FormValidation()){}
+        if(InputValidation(illegalUserChars,data.username))
+         if(InputValidation(illegalPassChars,data.password)){
+           data.password = EncryptPass(data.password);
+           // console.log(data.username);
+           // console.log(data.password);
+          srvc.test();
+         }
      },event);
   }
 
@@ -55,11 +61,12 @@ module.exports = {
   */
   function buttonCheck(callBack,event){
 
-    event.preventdefault();
+    event.preventDefault();
     callBack()
   }
-  function EncryptPass(){
+  function EncryptPass(pass){
 
+    return pass;
   }
   /*
   * Runs any form validation we need
