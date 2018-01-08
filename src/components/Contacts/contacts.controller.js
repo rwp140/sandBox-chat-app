@@ -7,6 +7,9 @@ module.exports = {
     return {
       msg: 'Welcome to contacts'
     }
+  },
+  methods: {
+    LoadNewChat:LoadNewChat
   }
 }
 //Variables
@@ -20,7 +23,8 @@ module.exports = {
 
   }
   function LoadNewChat() {
-
+    // console.log(svc);
+    svc.LoadChat();
   }
   function RenderContactsList() {
 
