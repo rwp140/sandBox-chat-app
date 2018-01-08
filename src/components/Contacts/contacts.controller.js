@@ -1,7 +1,7 @@
 //Imports
-var svc = require('./contacts.Service')
+var svc = require('./contacts.service');
 //Exports
-export default {
+module.exports = {
   name: 'Contacts',
   data () {
     return {

@@ -1,7 +1,7 @@
 //imports
 
 //exports
-modules.Exports = {
+module.Exports = {
 
 }
 //Varaibles
