@@ -1,15 +1,7 @@
 <template src="./contacts.template.html">
 </template>
 
-<script>
-export default {
-  name: 'Contacts',
-  data () {
-    return {
-      msg: 'Welcome to contacts'
-    }
-  }
-}
+<script src = './contacts.controller.js'>
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
