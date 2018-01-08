@@ -1,6 +1,6 @@
 //Imports
 const srvc = require('./SignIn.Service');
-
+// import srvc from './SignIn.Service';
 
 //Exports
 module.exports = {
@@ -39,7 +39,7 @@ module.exports = {
            data.password = EncryptPass(data.password);
            // console.log(data.username);
            // console.log(data.password);
-          srvc.test();
+          srvc.SignInUserPost();
          }
      },event);
   }
