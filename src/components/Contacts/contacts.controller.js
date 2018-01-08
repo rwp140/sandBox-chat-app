@@ -1,5 +1,5 @@
 //Imports
-
+var svc = require('./contacts.Service')
 //Exports
 export default {
   name: 'Contacts',
@@ -11,6 +11,8 @@ export default {
 }
 //Variables
   //Public
+  var Contacts = [{Pid:'',Name:''}];
+  var Users = [''];
   //Private
 //Functions
   //Public
@@ -27,7 +29,7 @@ export default {
 
   }
   function DisplayKeyBoard(){
-    
+
   }
   //Private
   /*
