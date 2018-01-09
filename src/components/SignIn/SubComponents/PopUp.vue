@@ -1,6 +1,8 @@
 <template>
   <div class="Pop-Up">
-
+    {{msg}}
+    <button>yes</button>
+    <button>no</button>
   </div>
 </template>
 

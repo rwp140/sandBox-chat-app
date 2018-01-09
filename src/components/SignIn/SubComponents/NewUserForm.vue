@@ -1,6 +1,12 @@
 <template>
   <div class="Pop-Up">
 
+      <h3>Reset token</h3>
+      <input type='text'>
+      <h3>New Password</h3>
+      <input type='password'>
+      <h3>Confirm new password</h3>
+      <input type='password'>
   </div>
 </template>
 

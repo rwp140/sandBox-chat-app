@@ -1,6 +1,7 @@
 <template>
   <div class="Pop-Up">
-
+    send reset token to email
+    <input type='email'/>
   </div>
 </template>
 
@@ -18,6 +19,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .Pop-Up{
-  
+
 }
 </style>
