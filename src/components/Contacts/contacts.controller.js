@@ -1,5 +1,6 @@
 //Imports
-var svc = require('./contacts.service');
+const svc = require('./contacts.service');
+const TestPlate = require('./Template/Test').default;
 //Exports
 module.exports = {
   name: 'Contacts',
@@ -10,6 +11,9 @@ module.exports = {
   },
   methods: {
     LoadNewChat:LoadNewChat
+  },
+  components: {
+    TestPlate
   }
 }
 //Variables
