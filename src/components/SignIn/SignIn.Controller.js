@@ -1,7 +1,10 @@
 //Imports
 const srvc = require('./SignIn.Service');
 // import srvc from './SignIn.Service';
-const ForgotPasswordForm = require('./subComponents/ForgotPasswordForm');
+const ForgotPasswordForm = require('./subComponents/ForgotPasswordForm').default;
+const NewPasswordForm = require('./subComponents/NewPasswordForm').default;
+const NewUserForm = require('./subComponents/NewUserForm').default;
+const PopUp = require('./subComponents/PopUp').default;
 
 //Exports
 module.exports = {
@@ -14,7 +17,7 @@ module.exports = {
     OpenForgotUserForm:OpenForgotUserForm,
     OpenNewUserForm:OpenNewUserForm
   },
-  components: {}//other components and templates go here
+  components: {ForgotPasswordForm,NewPasswordForm,NewUserForm,PopUp}//other components and templates go here
 }
 // Variables
   //public
