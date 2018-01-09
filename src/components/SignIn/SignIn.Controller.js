@@ -1,6 +1,7 @@
 //Imports
 const srvc = require('./SignIn.Service');
 // import srvc from './SignIn.Service';
+const ForgotPasswordForm = require('./subComponents/ForgotPasswordForm');
 
 //Exports
 module.exports = {

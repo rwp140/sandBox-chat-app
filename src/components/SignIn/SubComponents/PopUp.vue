@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: '',
+  name: 'PopUp',
   data () {
     return {
       msg: 'Pop-Up'

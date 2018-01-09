@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: '',
+  name: 'NewPasswordForm',
   data () {
     return {
       msg: 'Pop-Up'

@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: '',
+  name: 'NewUserForm',
   data () {
     return {
       msg: 'Pop-Up'

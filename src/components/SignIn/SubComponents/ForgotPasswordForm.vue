@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: '',
+  name: 'ForgotPasswordForm',
   data () {
     return {
       msg: 'Pop-Up'
