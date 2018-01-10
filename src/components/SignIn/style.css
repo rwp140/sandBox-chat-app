@@ -45,6 +45,7 @@ form {
 
 .Pop-Up{
   /* float: right; */
+  display: none;
   width: 20%;
   height: 25%;
   /* padding: 0.1%; */
@@ -52,5 +53,6 @@ form {
   border:black 10px;
   position: fixed; /* Stay in place*/
   z-index: 1; /* Sit on top */
-  left: 0;
+  /* left: 0; */
+  margin: auto;
 }
