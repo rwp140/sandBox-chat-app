@@ -5,7 +5,7 @@
 
 <script>
 export default {
-  name: 'topBar',
+  name: 'ContatcItem',
   data () {
     return {
       msg: ''
