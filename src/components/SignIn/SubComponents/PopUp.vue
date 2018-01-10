@@ -2,8 +2,8 @@
   <div class="Pop-Up" id='general-Pop-Up'>
     <div>
       <p>{{msg}}</p>
-      <button v-on:click="closeModal">yes</button>
-      <button>no</button>
+      <button>yes</button>
+      <button v-on:click="closeModal">no</button>
     </div>
   </div>
 </template>
@@ -15,7 +15,7 @@ export default {
     return {
     }
   },
-  props: ['msg',"closeModal"],
+  props: ['msg',"closeModal","functionCall"],
 
 }
 </script>
