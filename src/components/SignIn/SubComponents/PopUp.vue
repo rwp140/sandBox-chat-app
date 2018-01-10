@@ -1,5 +1,5 @@
 <template>
-  <div class="Pop-Up">
+  <div class="Pop-Up" id='general-Pop-Up'>
     {{msg}}
     <button>yes</button>
     <button>no</button>
@@ -20,6 +20,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .Pop-Up{
+
+}
+#general-Pop-Up{
 
 }
 </style>
