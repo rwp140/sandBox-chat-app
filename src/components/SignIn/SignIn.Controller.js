@@ -22,11 +22,12 @@ module.exports = {
 // Variables
   //public
   var data = {};
-  data.msg = "wellcome to sign in."
+  data.msg = "Forgot Password?"
   data.username = "";
   data.password = "";
   //private
-
+  var modal = document.getElementById('general-Pop-Up');
+  //getElementById('myModal');
 //Functions
 
   //public
@@ -49,9 +50,12 @@ module.exports = {
   }
 
   function OpenForgotUserForm(event){
-     buttonCheck(()=>{
-
-     },event);
+    modal = document.getElementById('general-Pop-Up');
+    buttonCheck(()=>{
+      console.log(modal);
+      console.log('forgot user?');
+      modal.style.display='block';
+    },event);
   }
   function OpenNewUserForm(event){
      buttonCheck(()=>{
