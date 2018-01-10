@@ -26,9 +26,9 @@ module.exports = {
   function LoadProfile() {
 
   }
-  function LoadNewChat() {
+  function LoadNewChat(event, router) {
     // console.log(svc);
-    svc.LoadChat();
+    svc.LoadChat(router);
   }
   function RenderContactsList() {
 
