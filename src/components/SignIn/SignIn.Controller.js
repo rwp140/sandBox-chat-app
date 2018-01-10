@@ -13,6 +13,7 @@ module.exports = {
     return data
   },
   methods: {
+    closeModal:closeModal,
     LogIn:LogIn,
     OpenForgotUserForm:OpenForgotUserForm,
     OpenNewUserForm:OpenNewUserForm
@@ -22,7 +23,7 @@ module.exports = {
 // Variables
   //public
   var data = {};
-  data.msg = "Forgot Password?"
+  data.msg = "Forgot Password?";
   data.username = "";
   data.password = "";
   //private
@@ -31,6 +32,9 @@ module.exports = {
 //Functions
 
   //public
+  function closeModal(){
+    modal.style.display='none';
+  }
   /*
   * Logs user in
   */
@@ -54,6 +58,7 @@ module.exports = {
     buttonCheck(()=>{
       console.log(modal);
       console.log('forgot user?');
+      console.log(data.msg);
       modal.style.display='block';
     },event);
   }
