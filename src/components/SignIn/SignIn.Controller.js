@@ -15,8 +15,10 @@ module.exports = {
   methods: {
     closeModal:closeModal,
     LogIn:LogIn,
-    OpenForgotUserForm:OpenForgotUserForm,
-    OpenNewUserForm:OpenNewUserForm
+    OpenForgotPassForm:OpenForgotPassForm,
+    OpenNewUserForm:OpenNewUserForm,
+    SendForgotPassForm:SendForgotPassForm,
+    SendNewUserForm:SendNewUserForm
   },
   components: {ForgotPasswordForm,NewPasswordForm,NewUserForm,PopUp}//other components and templates go here
 }
@@ -52,19 +54,34 @@ module.exports = {
          }
      },event);
   }
-
-  function OpenForgotUserForm(event){
-    modal = document.getElementById('general-Pop-Up');
+  function OpenForgotPassForm(event){
     buttonCheck(()=>{
-      console.log(modal);
-      console.log('forgot user?');
-      console.log(data.msg);
+      modal = document.getElementById('forgot-pass-form');
+      // console.log(modal);
+      // console.log('forgot user?');
+      // console.log(data.msg);
       modal.style.display='block';
     },event);
   }
   function OpenNewUserForm(event){
      buttonCheck(()=>{
+       modal = document.getElementById('new-user-form');
 
+       modal.style.display='block';
+     },event);
+  }
+  function SendForgotPassForm(event){
+    buttonCheck(()=>{
+      modal = document.getElementById('forgot-pass-form');
+      // console.log(modal);
+      console.log('sending token');
+      // console.log(data.msg);
+      closeModal();
+    },event);
+  }
+  function SendNewUserForm(event){
+     buttonCheck(()=>{
+       closeModal();
      },event);
   }
   //Private
