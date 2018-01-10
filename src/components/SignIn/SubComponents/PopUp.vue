@@ -1,8 +1,10 @@
 <template>
   <div class="Pop-Up" id='general-Pop-Up'>
-    {{msg}}
-    <button>yes</button>
-    <button>no</button>
+    <div>
+      <p>{{msg}}</p>
+      <button>yes</button>
+      <button>no</button>
+    </div>
   </div>
 </template>
 
@@ -19,10 +21,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.Pop-Up{
-
-}
-#general-Pop-Up{
-
+div{
+  width: 20%;
+  height: 25%;
+  background-color: white;
+  margin: auto;
 }
 </style>
