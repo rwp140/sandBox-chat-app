@@ -2,10 +2,10 @@
 <div id="background">
 <div class="container">
 <!-- {{msg}} -->
-  <PopUp></PopUp>
-  <ForgotPasswordForm/>
+  <PopUp :msg="msg" :closeModal="closeModal" />
+  <ForgotPasswordForm :functionCall="SendForgotPassForm"/>
   <NewPasswordForm/>
-  <NewUserForm/>
+  <NewUserForm :functionCall="SendNewUserForm"/>
     <div class="jumbotron" id="title">
 
         <h1 class="display-3">Sandbox Chat App</h1>
