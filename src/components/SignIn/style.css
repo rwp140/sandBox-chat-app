@@ -42,3 +42,15 @@ form {
     margin-bottom: 10%;
 
 }
+
+.Pop-Up{
+  /* float: right; */
+  width: 20%;
+  height: 25%;
+  /* padding: 0.1%; */
+  background-color: white;
+  border:black 10px;
+  position: fixed; /* Stay in place*/
+  z-index: 1; /* Sit on top */
+  left: 0;
+}
