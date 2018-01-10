@@ -1,15 +1,7 @@
 <template src="./Chat.template.html">
 </template>
 
-<script>
-export default {
-  name: 'Chat',
-  data () {
-    return {
-      msg: 'Welcome to Chat'
-    }
-  }
-}
+<script src='./Chat.controller.js'>
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

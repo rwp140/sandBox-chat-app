@@ -1,7 +1,7 @@
 //Imports
-const MessageItem = require('./SubComponents/MessageItem');
-const actionSelection = require('./SubComponents/actionSelection');
-const chatTopBar = require('./SubComponents/chatTopBar');
+const MessageItem = require('./SubComponents/MessageItem').default;
+const actionSelection = require('./SubComponents/actionSelection').default;
+const chatTopBar = require('./SubComponents/chatTopBar').default;
 //Exports
 module.exports = {
   name: 'Chat',
@@ -10,7 +10,7 @@ module.exports = {
       msg: 'Welcome to Chat'
     }
   },
-  components:{MessageItem,actionSelection,chatTopBar}
+  components:{MessageItem:MessageItem,ActionSelection:actionSelection,ChatTopBar:chatTopBar}
 }
 //Variables
   //public
