@@ -40,7 +40,7 @@ module.exports = {
   /*
   * Logs user in
   */
-  function LogIn(event){
+  function LogIn(event,router){
      buttonCheck(()=>{
        let illegalUserChars =['*']
        let illegalPassChars =['*'];
@@ -50,7 +50,8 @@ module.exports = {
            data.password = EncryptPass(data.password);
            // console.log(data.username);
            // console.log(data.password);
-          srvc.SignInUserPost();
+           // console.log(router);
+          srvc.SignInUserPost(router);
          }
      },event);
   }

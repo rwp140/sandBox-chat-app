@@ -12,13 +12,16 @@ module.exports = {
   //private
 //Functions
   //public
-  function SignInUserPost(){
+  function SignInUserPost(router){
     console.log('signing in user');
-    LoadContacts();
+
+    LoadContacts(router);
   }
   //private
-  function LoadContacts() {
+  function LoadContacts(router) {
     // window.location.pathname='contacts';
     // console.log(Router);
-    Router.push({ path: '/contacts' });
+    // console.log(router);
+    router.push({ path: '/contacts' });
+
   }
