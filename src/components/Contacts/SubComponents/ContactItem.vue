@@ -1,6 +1,6 @@
 <template>
   <div class="Contact-Item">
-    {{userName}}
+    <div class='userName'>{{userName}}</div> <div class='receipt'>...</div>
   </div>
 </template>
 
@@ -18,7 +18,18 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.userName{
+  display: inline-block;
+}
+.receipt{
+  display: inline-block;
+  text-align: right;
+}
 .Contact-Item{
-  border: black 1px;
+  border: black 1px solid;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
 }
 </style>

@@ -30,6 +30,7 @@ module.exports = {
   }
   function LoadNewChat(event, router) {
     // console.log(svc);
+    console.log('test');
     svc.LoadChat(router);
   }
   function RenderContactsList() {

@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="top-Bar">
     <h1>contacts</h1>
     profile >
   </div>
@@ -20,5 +20,8 @@ export default {
 <style scoped>
 h1{
   display: inline-block;
+}
+.top-Bar{
+  border: black 1px solid;
 }
 </style>

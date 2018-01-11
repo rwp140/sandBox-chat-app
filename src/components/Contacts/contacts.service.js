@@ -16,10 +16,10 @@ function test() {
   //Private
 //Functions
   //Public
-  function LoadChat(){
+  function LoadChat(rotuer){
     console.log("go");
     // console.log(Router);
-    Router.push({ path: '/chat' });
+    rotuer.push({ path: '/chat' });
   }
   function RENDERContactsListGET(){
 

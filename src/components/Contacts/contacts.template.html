@@ -2,10 +2,10 @@
   <!-- <h1>{{ msg }}</h1> -->
   <topBar/>
   <div id="chat-bot">
-    <ContactItem  userName='Chat-Bot'/>
+    <ContactItem  userName='Chat-Bot' v-on:click.native="LoadNewChat($event,$router)"/>
   </div>
   <div id="contacts">
-    <ContactItem userName='lena'/>
+    <ContactItem userName='lena' v-on:click="LoadNewChat($event,$router)"/>
   </div>
-  <!-- <button v-on:click="LoadNewChat($event,$router)" >test chat</button> -->
+  <button v-on:click="LoadNewChat($event,$router)">test chat</button>
 </div>
