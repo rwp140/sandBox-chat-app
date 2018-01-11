@@ -3,6 +3,7 @@ const svc = require('./contacts.service');
 // const TestPlate = require('./Template/Test').default;
 const topBar = require('./SubComponents/topBar').default;
 const ContactItem = require('./SubComponents/ContactItem').default;
+const store = require('../../store');
 //Exports
 module.exports = {
   name: 'Contacts',
@@ -18,6 +19,11 @@ module.exports = {
     topBar,ContactItem
   }
 }
+console.log(store);
+console.log(store.state);
+store.state.test = 'test';
+console.log(store);
+console.log(store.state);
 //Variables
   //Public
   var Contacts = [{Pid:'',Name:''}];
@@ -31,6 +37,9 @@ module.exports = {
   function LoadNewChat(event, router) {
     // console.log(svc);
     console.log('test');
+    let num = Math.random();
+    console.log('num',num);
+    store.state.chatID= num;
     svc.LoadChat(router);
   }
   function RenderContactsList() {
