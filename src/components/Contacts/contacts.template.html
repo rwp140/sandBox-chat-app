@@ -1,4 +1,11 @@
 <div>
-  <h1>{{ msg }}</h1>
-  <button v-on:click="LoadNewChat($event,$router)" >test chat</button>
+  <!-- <h1>{{ msg }}</h1> -->
+  <topBar/>
+  <div id="chat-bot">
+    <ContactItem  userName='Chat-Bot'/>
+  </div>
+  <div id="contacts">
+    <ContactItem userName='lena'/>
+  </div>
+  <!-- <button v-on:click="LoadNewChat($event,$router)" >test chat</button> -->
 </div>

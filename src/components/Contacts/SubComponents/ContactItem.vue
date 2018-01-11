@@ -1,5 +1,6 @@
 <template>
-  <div class="">
+  <div class="Contact-Item">
+    {{userName}}
   </div>
 </template>
 
@@ -10,10 +11,14 @@ export default {
     return {
       msg: ''
     }
-  }
+  },
+  props: ['userName','ReadReceipt']
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.Contact-Item{
+  border: black 1px;
+}
 </style>

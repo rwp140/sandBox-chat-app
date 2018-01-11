@@ -1,6 +1,8 @@
 //Imports
 const svc = require('./contacts.service');
-const TestPlate = require('./Template/Test').default;
+// const TestPlate = require('./Template/Test').default;
+const topBar = require('./SubComponents/topBar').default;
+const ContactItem = require('./SubComponents/ContactItem').default;
 //Exports
 module.exports = {
   name: 'Contacts',
@@ -13,7 +15,7 @@ module.exports = {
     LoadNewChat:LoadNewChat
   },
   components: {
-    TestPlate
+    topBar,ContactItem
   }
 }
 //Variables
