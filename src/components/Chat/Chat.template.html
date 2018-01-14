@@ -1,16 +1,21 @@
 
 <div class="">
-  <div class="wrapper">
-    <!-- <div class="spacer"></div> -->
-    <MessageItem sender="lena" senderIcon="empty" content="hello anna" style=""/>
-    <br>
+  <chatTopBar/>
+  <div id = "messages" v-for="message in messages">
+    <!-- <div class="wrapper">-->
+      <!-- <div class="spacer"></div> -->
+      <!--<MessageItem sender="lena" senderIcon="empty" content="hello anna" style=""/>
+      <br>
+    </div> -->
+    <div class="wrapper">
+      <div class="spacer"></div>
+      <MessageItem :sender="message.SenderName" senderIcon="empty" :content="message.content" style=""/>
+      <br>
+    </div>
   </div>
-  <div class="wrapper">
-    <div class="spacer"></div>
-    <MessageItem sender="anna" senderIcon="empty" content="hello Lena" style=""/>
-    <br>
-  </div>
+  <!-- hello:{{messages[0].SenderName}} -->
   <div class="wrapper">
     <div>[]</div> <input type='text'/>
   </div>
+  <!-- {{chatID}} -->
 </div>
