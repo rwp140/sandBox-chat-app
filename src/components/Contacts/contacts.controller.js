@@ -37,9 +37,9 @@ console.log(store.state);
   function LoadNewChat(event, router) {
     // console.log(svc);
     console.log('test');
-    let num = Math.random();
-    console.log('num',num);
-    store.state.chatID= num;
+    // let num = Math.random();
+    // console.log('num',num);
+    // store.state.chatID= num;
     svc.LoadChat(router);
   }
   function RenderContactsList() {
