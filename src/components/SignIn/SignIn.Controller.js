@@ -26,8 +26,8 @@ module.exports = {
   //public
   var data = {};
   data.msg = "Forgot Password?";
-  data.username = "";
-  data.password = "";
+  data.username = "Anna@email.com";
+  data.password = "Password";
   //private
   var modal = document.getElementById('general-Pop-Up');
   //getElementById('myModal');
