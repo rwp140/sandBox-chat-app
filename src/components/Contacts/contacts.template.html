@@ -14,8 +14,8 @@
     <ContactItem :userName='contact.Name' v-on:click.native="LoadNewChat($event,$router,contact.Pid)"/>
   </div>
   <div id="search">
-    <div class = "icon-holder"></div>
-    <input type = 'text'>
+    <input id="search-text" type = 'text' placeholder="Search for or through contacts">
+    <div id = "search-icon-holder"></div>
   </div>
   <!-- <button v-on:click="LoadNewChat($event,$router)">test chat</button> -->
 </div>
