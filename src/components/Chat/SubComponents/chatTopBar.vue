@@ -1,6 +1,6 @@
 <template>
   <div class="TopBar">
-    <span><</span> <h2>Contacts</h2> <span>{{recipient}}</span>
+    <span><-</span> <span>back</span> <span>{{recipient}}</span>
 
   </div>
 </template>
