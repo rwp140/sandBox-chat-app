@@ -56,7 +56,7 @@ module.exports ={
     {
       let chatID = dummyData[i].chatID;
       if(ID==chatID){
-        console.log(dummyData);
+        // console.log(dummyData);
         return dummyData[i].messages;
       }
     }

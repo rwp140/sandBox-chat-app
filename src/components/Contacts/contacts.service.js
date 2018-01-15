@@ -22,7 +22,7 @@ export function test() {
 //Functions
   //Public
   export function LoadChat(rotuer,ID){
-    console.log("go");
+    // console.log("go");
     // console.log(Router);
     // store.state.ChatID = 11992;
     // let ID = 11992;

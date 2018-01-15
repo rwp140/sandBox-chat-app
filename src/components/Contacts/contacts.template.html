@@ -2,13 +2,16 @@
   <!-- <h1>{{ msg }}</h1> -->
   <topBar/>
   <div id="chat-bot">
-    <ContactItem  userName='Chat-Bot' v-on:click.native="LoadNewChat($event,$router)"/>
+    <ContactItem  userName='Chat-Bot' v-on:click.native="LoadNewChat($event,$router,'bot')"/>
   </div>
-  <div id="contacts">
+  <!-- <div id="contacts">
     <ContactItem userName='lena' v-on:click="LoadNewChat($event,$router)"/>
     <ContactItem userName='mike' v-on:click="LoadNewChat($event,$router)"/>
     <ContactItem userName='jesse' v-on:click="LoadNewChat($event,$router)"/>
     <ContactItem userName='kevin' v-on:click="LoadNewChat($event,$router)"/>
+  </div> -->
+  <div id="contacts" v-for="contact in Contacts">
+    <ContactItem :userName='contact.Name' v-on:click.native="LoadNewChat($event,$router,contact.Pid)"/>
   </div>
   <div id="search">
     <div class = "icon-holder"></div>

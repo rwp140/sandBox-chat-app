@@ -37,8 +37,8 @@ store.state.test = 'test';
   }
   function LoadNewChat(event, router,ID) {
     // console.log(svc);
-    console.log('test');
-    console.log(ID);
+    // console.log('test');
+    // console.log(ID);
     // let num = Math.random();
     // console.log('num',num);
     // store.state.chatID= num;

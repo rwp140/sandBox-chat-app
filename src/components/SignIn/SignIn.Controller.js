@@ -75,7 +75,7 @@ module.exports = {
     buttonCheck(()=>{
       modal = document.getElementById('forgot-pass-form');
       // console.log(modal);
-      console.log('sending token');
+      // console.log('sending token');
       // console.log(data.msg);
       closeModal();
     },event);
