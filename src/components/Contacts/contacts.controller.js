@@ -8,9 +8,7 @@ const store = require('../../store');
 module.exports = {
   name: 'Contacts',
   data () {
-    return {
-      msg: 'Welcome to contacts'
-    }
+    return data
   },
   methods: {
     LoadNewChat:LoadNewChat
@@ -18,7 +16,7 @@ module.exports = {
   components: {
     topBar,ContactItem
   },
-  mounted: function () {console.log("mounted");}
+  mounted: RENDERContactsItem
 }
 // console.log(store);
 // console.log(store.state);
@@ -27,8 +25,10 @@ store.state.test = 'test';
 // console.log(store.state);
 //Variables
   //Public
-  var Contacts = [{Pid:'',Name:''}];
-  var Users = [''];
+  var data = {};
+  data.msg ='Welcome to contacts';
+  data.Contacts = [{Pid:'',Name:''}];
+  // var Users = [''];
   //Private
 //Functions
   //Public
@@ -57,5 +57,11 @@ store.state.test = 'test';
   * Passes data to a new Contacts Item Template
   */
   function RENDERContactsItem(string){
+    svc.RENDERContactsListGET().then((val)=>{
+      data.contacts=val;
+      // console.log(val);
+      // console.log(data.contacts);
+    }).catch((message)=>{
 
+    });
   }
