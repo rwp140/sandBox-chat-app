@@ -16,6 +16,9 @@ module.exports = {
     ActionSelection:actionSelection,
     ChatTopBar:chatTopBar
   },
+  methods: {
+    loadContacts:loadContacts
+  },
   mounted:LoadChat
 }
 // console.log(store);
@@ -37,5 +40,8 @@ module.exports = {
       // console.log("chatID", data.chatID,store.state.chatID);
       data.messages = svc.LoadChat(data.chatID);
     // })
+  }
+  function loadContacts(router){
+    router.push({ path: '/contacts' })
   }
   //private
