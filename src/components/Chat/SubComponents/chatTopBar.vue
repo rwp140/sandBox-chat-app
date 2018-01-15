@@ -1,7 +1,11 @@
 <template>
   <div class="TopBar">
-    <span><-</span> <span>back</span> <span>{{recipient}}</span>
-
+    <div id="back">
+      <span ><-back</span>
+    </div>
+    <div v-for="recipient in recipients">
+       <span>{{recipient}}</span>
+    </div>
   </div>
 </template>
 
@@ -11,7 +15,7 @@ export default {
   data () {
     return {
     }
-  }, props: ['recipient']
+  }, props: ['recipients']
 }
 </script>
 
@@ -19,11 +23,22 @@ export default {
 <style scoped>
 span, h1{
   display: inline-block;
+  height: inherit;
 }
-div{
-  background-color: lightblue;
-  max-width:50%;
+.TopBar{
+  background-color: pearl;
+  border-bottom: black solid 1px;
+  /* min-height: 10%; */
+  height: 5%;
+  max-width:100%;
   text-align: left;
   padding: 1%;
+  display: flex;
+  justify-content: space-between;
+}
+#back :hover{
+  background-color: rgb(1,1,1);
+  background-color: rgba(0,0,0,0.2);
+  /* color:rgb(200,200,200); */
 }
 </style>
