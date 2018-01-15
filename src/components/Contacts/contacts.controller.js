@@ -17,13 +17,14 @@ module.exports = {
   },
   components: {
     topBar,ContactItem
-  }
+  },
+  mounted: function () {console.log("mounted");}
 }
-console.log(store);
-console.log(store.state);
+// console.log(store);
+// console.log(store.state);
 store.state.test = 'test';
-console.log(store);
-console.log(store.state);
+// console.log(store);
+// console.log(store.state);
 //Variables
   //Public
   var Contacts = [{Pid:'',Name:''}];
