@@ -1,4 +1,3 @@
-
 <div class="">
   <chatTopBar recipient=""/>
   <div id = "messages" v-for="message in messages">
@@ -8,13 +7,12 @@
       <br>
     </div> -->
     <div class="wrapper">
-      <div class="spacer"></div>
-      <MessageItem :sender="message.SenderName" senderIcon="empty" :content="message.content" style=""/>
+      <MessageItem :sender="message.SenderName" senderIcon="empty" :content="message.content" :direction="message.direction" style=""/>
       <br>
     </div>
   </div>
   <!-- hello:{{messages[0].SenderName}} -->
-  <div class="wrapper">
+  <div class="text-wrapper">
     <div>[]</div> <input type='text'/>
   </div>
   <!-- {{chatID}} -->
