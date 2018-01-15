@@ -27,7 +27,8 @@ module.exports = {
   //public
   var data = {};
   data.chatID = 0;
-  data.messages = {};
+  data.messages = [{SenderName:"System",content:"No messages yet.",direction:"right"}];
+  data.contacts = ["error name not saved to DB"];
   //private
 //Function
   //public
@@ -38,7 +39,11 @@ module.exports = {
       data.chatID = store.state.chatID;
       // console.log("chatID", data.chatID,store.state.chatID);
       // console.log("chatID", data.chatID,store.state.chatID);
-      data.messages = svc.LoadChat(data.chatID);
+      let chat = svc.LoadChat(data.chatID);
+      if(chat){
+        data.messages = chat.messages;
+        data.contacts = chat.contacts;
+      }
     // })
   }
   function loadContacts(router){

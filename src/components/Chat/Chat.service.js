@@ -14,6 +14,7 @@ module.exports ={
     // {Pid:292922,Name:'Jesse'}
   var dummyData= [{
     chatID:'bot',
+    contacts:["Chat-Bot"],
     messages:[
       {SenderName:"Chat-Bot",content:"Hello I'm chat bot.",direction:"right"},
       {SenderName:"Anna",content:"Hello Chat Bot.",direction:"left"}
@@ -21,6 +22,7 @@ module.exports ={
   },
   {
     chatID:11992,
+    contacts:["Lena"],
     messages:[
       {SenderName:"Lena",content:"Hello Anna",direction:"right"},
       {SenderName:"Anna",content:"yo Lena!",direction:"left"}
@@ -28,6 +30,7 @@ module.exports ={
   },
   {
     chatID:19291,
+    contacts:["Mike"],
     messages:[
       {SenderName:"Mike",content:"Hello Ann.",direction:"right"},
       {SenderName:"Anna",content:"Hello Mike!",direction:"left"}
@@ -35,6 +38,7 @@ module.exports ={
   },
   {
     chatID:21219,
+    contacts:["Kevin"],
     messages:[
       {SenderName:"Kevin",content:"Hello Ann.",direction:"right"},
       {SenderName:"Anna",content:"Hello Kevin",direction:"left"}
@@ -42,8 +46,9 @@ module.exports ={
   },
   {
     chatID:292922,
+    contacts:["Jesse"],
     messages:[
-      {SenderName:"Mike",content:"Hello Ann.",direction:"right"},
+      {SenderName:"Jesse",content:"Hello Ann.",direction:"right"},
       {SenderName:"Anna",content:"Hello Jesse!",direction:"left"}
     ]
   }];
@@ -57,7 +62,7 @@ module.exports ={
       let chatID = dummyData[i].chatID;
       if(ID==chatID){
         // console.log(dummyData);
-        return dummyData[i].messages;
+        return dummyData[i];
       }
     }
 
