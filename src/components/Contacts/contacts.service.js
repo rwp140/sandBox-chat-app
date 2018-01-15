@@ -25,12 +25,12 @@ function test() {
     let ID = 11992;
     store.state.chatID = ID
     console.log(ID,store.state.chatID);
+    console.log('chat',store.state.chatID);
     //route
-    if(ID==dummyData.chatID){
-      console.log(dummyData.messages);
-      store.state.messages= dummyData.messages;
-      console.log(store.state.messages);
-    }
+    // if(ID==dummyData.chatID){
+    //   console.log(dummyData.messages);
+    //   console.log(store.state.messages);
+    // }
 
     rotuer.push({ path: '/chat' });
   }
