@@ -31,5 +31,6 @@ export default {
   display: flex;
   justify-content: space-between;
   padding: 5px;
+  height: 6em;
 }
 </style>

@@ -1,3 +1,12 @@
 #search-text{
   width:100%
 }
+#chat-bot{
+  box-shadow: 0px 3.5px 7px rgba(0, 0, 0, .5);
+}
+.contacts{
+  height: 80%;
+}
+#contacts-wrapper{
+  height: 100%;
+}

@@ -1,4 +1,4 @@
-<div>
+<div id="contacts-wrapper">
   <!-- <h1>{{ msg }}</h1> -->
   <topBar/>
   <div id="chat-bot">
@@ -10,8 +10,8 @@
     <ContactItem userName='jesse' v-on:click="LoadNewChat($event,$router)"/>
     <ContactItem userName='kevin' v-on:click="LoadNewChat($event,$router)"/>
   </div> -->
-  <div id="contacts" v-for="contact in Contacts">
-    <ContactItem :userName='contact.Name' v-on:click.native="LoadNewChat($event,$router,contact.Pid)"/>
+  <div id="contacts">
+    <ContactItem v-for="contact in Contacts" :userName='contact.Name' v-on:click.native="LoadNewChat($event,$router,contact.Pid)"/>
   </div>
   <div id="search">
     <input id="search-text" type = 'text' placeholder="Search for or through contacts">
