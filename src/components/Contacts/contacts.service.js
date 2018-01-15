@@ -2,30 +2,33 @@
 // const Router = require('../.././router/index').default;
 const store = require('../../store');
 
-//exports
+
 // module.exports = {
-//   LoadChat,RENDERContactsListGET,test
+//   test:test,LoadChat:LoadChat,RENDERContactsListGET:RENDERContactsListGET
 // }
-module.exports = {
-  test,LoadChat
-}
-function test() {
+export function test() {
   console.log('test!');
 }
 //Varaibles
   //Public
   //Private
-  var dummyData= {chatID:11992, messages:[{SenderName:"Lena",content:"Hello Ann."},{SenderName:"Anna",content:"Hello Lena!"}]};
+  //// var dummyData= {chatID:11992, messages:[{SenderName:"Lena",content:"Hello Ann."},{SenderName:"Anna",content:"Hello Lena!"}]};
+  var testContactsData = [
+    {Pid:11992,Name:'Lena'},
+    {Pid:11992,Name:'Mike'},
+    {Pid:11992,Name:'Kevin'},
+    {Pid:11992,Name:'Jesse'}
+  ];
 //Functions
   //Public
-  function LoadChat(rotuer){
+  export function LoadChat(rotuer){
     console.log("go");
     // console.log(Router);
     // store.state.ChatID = 11992;
     let ID = 11992;
     store.state.chatID = ID
-    console.log(ID,store.state.chatID);
-    console.log('chat',store.state.chatID);
+    // console.log(ID,store.state.chatID);
+    // console.log('chat',store.state.chatID);
     //route
     // if(ID==dummyData.chatID){
     //   console.log(dummyData.messages);
@@ -34,13 +37,20 @@ function test() {
 
     rotuer.push({ path: '/chat' });
   }
-  function RENDERContactsListGET(){
-
+  export function RENDERContactsListGET(){
+    //set up promise
+    return new Promise((resolve, reject) => {
+      //set route
+      //get route
+        //resolve promise
+      resolve(testContactsData);
+        //reject promise
+    });
   }
-  function UserListGET(){
-
-  }
-  function ChatReceiptGET() {
-
-  }
+  // function UserListGET(){
+  //
+  // }
+  // function ChatReceiptGET() {
+  //
+  // }
   //Private
