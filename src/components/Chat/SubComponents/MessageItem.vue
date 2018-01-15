@@ -12,6 +12,7 @@
       </div>
     </div>
     <div v-if="direction=='right'" class="spacer"></div>
+    <br>
   </div>
 </template>
 
