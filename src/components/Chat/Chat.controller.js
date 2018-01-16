@@ -43,6 +43,7 @@ module.exports = {
       if(chat){
         data.messages = chat.messages;
         data.contacts = chat.contacts;
+        // console.log(data.messages);
       }
     // })
   }
