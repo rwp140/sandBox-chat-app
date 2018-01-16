@@ -20,8 +20,15 @@ export default {
 <style scoped>
 h1{
   display: inline-block;
+  height: inherit;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 .top-Bar{
   border: black 1px solid;
+  position: fixed;
+  width: 100%;
+  height: 3em;
+  /* background-color: purple; */
 }
 </style>
