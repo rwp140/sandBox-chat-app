@@ -9,7 +9,7 @@
     <ContactItem userName='kevin' v-on:click="LoadNewChat($event,$router)"/>
   </div> -->
   <div id="contacts">
-    <ContactItem v-for="contact of Contacts" :userName='contact.Name' v-on:click.native="LoadNewChat($event,$router,contact.Pid)"/>
+    <ContactItem v-for="contact of Contacts" :key="contact.id" :userName='contact.Name' v-on:click.native="LoadNewChat($event,$router,contact.Pid)"/>
   </div>
   <div id="search">
     <input id="search-text" type = 'text' placeholder="Search for or through contacts">
