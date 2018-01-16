@@ -57,14 +57,29 @@ module.exports ={
   function LoadChat(ID){
     //route
     //dummy code
-    for(let i=0,l=dummyData.length;i<l;i++)
+    console.log(ID);
+    let mesagesData = [{SenderName:"System",content:"No messages yet.",direction:"right"}];
+    let found = false;
+    for(let i=0,l=dummyData.length; i<l&&!found; i++)
     {
       let chatID = dummyData[i].chatID;
+      console.log("checking",ID,chatID);
       if(ID==chatID){
+        console.log("found",ID,chatID);
         // console.log(dummyData);
-        return dummyData[i];
+        mesagesData = dummyData[i];
+        found = true;
+      } else {
+        mesagesData = {
+          chatID:'error',
+          contacts:["Lena"],
+          messages:[
+            {SenderName:"System",content:"No messages yet.",direction:"right"}
+          ]
+        }
       }
     }
-
+    console.log(mesagesData);
+    return mesagesData;
   }
   //Private
