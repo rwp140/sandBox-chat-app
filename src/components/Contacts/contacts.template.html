@@ -1,9 +1,7 @@
 <div id="contacts-wrapper">
   <!-- <h1>{{ msg }}</h1> -->
   <topBar/>
-  <div id="chat-bot">
-    <ContactItem  userName='Chat-Bot' v-on:click.native="LoadNewChat($event,$router,'bot')"/>
-  </div>
+  <ContactItem id="chat-bot" userName='Chat-Bot' v-on:click.native="LoadNewChat($event,$router,'bot')"/>
   <!-- <div id="contacts">
     <ContactItem userName='lena' v-on:click="LoadNewChat($event,$router)"/>
     <ContactItem userName='mike' v-on:click="LoadNewChat($event,$router)"/>
