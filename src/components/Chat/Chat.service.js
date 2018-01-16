@@ -21,7 +21,7 @@ module.exports ={
     ]
   },
   {
-    chatID:11992,
+    chatID:'11992',
     contacts:["Lena"],
     messages:[
       {SenderName:"Lena",content:"Hello Anna",direction:"right"},
@@ -29,7 +29,7 @@ module.exports ={
     ]
   },
   {
-    chatID:19291,
+    chatID:'19291',
     contacts:["Mike"],
     messages:[
       {SenderName:"Mike",content:"Hello Ann.",direction:"right"},
@@ -37,7 +37,7 @@ module.exports ={
     ]
   },
   {
-    chatID:21219,
+    chatID:'21219',
     contacts:["Kevin"],
     messages:[
       {SenderName:"Kevin",content:"Hello Ann.",direction:"right"},
@@ -45,7 +45,7 @@ module.exports ={
     ]
   },
   {
-    chatID:292922,
+    chatID:'292922',
     contacts:["Jesse"],
     messages:[
       {SenderName:"Jesse",content:"Hello Ann.",direction:"right"},

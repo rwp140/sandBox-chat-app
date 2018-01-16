@@ -14,10 +14,15 @@ export function test() {
   //Private
   //// var dummyData= {chatID:11992, messages:[{SenderName:"Lena",content:"Hello Ann."},{SenderName:"Anna",content:"Hello Lena!"}]};
   var testContactsData = [
-    {Pid:11992,Name:'Lena'},
-    {Pid:19291,Name:'Mike'},
-    {Pid:21219,Name:'Kevin'},
-    {Pid:292922,Name:'Jesse'}
+    {Pid:'11992',Name:'Lena'},
+    {Pid:'19291',Name:'Mike'},
+    {Pid:'21219',Name:'Kevin'},
+    {Pid:'292922',Name:'Jesse'},
+    {Pid:'101010',Name:'Bill'},
+    {Pid:'010101',Name:'steve'},
+    {Pid:'001001',Name:'Allan'},
+    {Pid:'100100',Name:'Elon'},
+    {Pid:'192111',Name:'Patrick'}
   ];
 //Functions
   //Public
