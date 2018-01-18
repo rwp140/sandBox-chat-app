@@ -26,9 +26,10 @@ export default new Router({
       component: Contacts
     },
     {
-      path: '/Chat',
+      path: '/Chat/:chatID',
       name: 'Chat',
-      component: Chat
+      component: Chat,
+      props:true
     },
     {
       path: '/Profile',
