@@ -6,16 +6,16 @@ const NewPasswordForm = require('./subComponents/NewPasswordForm').default;
 const NewUserForm = require('./subComponents/NewUserForm').default;
 const PopUp = require('./subComponents/PopUp').default;
 
-// Variables
-  //private
+//=============== Variables ====================================================
+  //private --------------------------------------------------------------------
   var modal = document.getElementById('general-Pop-Up');
-  //public
+  //public ---------------------------------------------------------------------
   var data = {};
   data.msg = "Forgot Password?";
   data.username = "Anna@email.com";
   data.password = "Password";
-//Functions
-  //Private
+//===============Functions======================================================
+  //Private---------------------------------------------------------------------
   /*
   * Sets up anything needed on mobile platform, disables default event, and runs
   * any algorythm we make to determin the user genuinly pressed the button
@@ -61,7 +61,7 @@ const PopUp = require('./subComponents/PopUp').default;
   /*
   * Logs user in
   */
-  function LogIn(event,router){
+  function LogIn(event,r){
      buttonCheck(()=>{
        let illegalUserChars =['*']
        let illegalPassChars =['*'];
@@ -69,7 +69,7 @@ const PopUp = require('./subComponents/PopUp').default;
         if(InputValidation(illegalUserChars,data.username))
          if(InputValidation(illegalPassChars,data.password)){
            data.password = EncryptPass(data.password);
-           srvc.SignInUserPost(router);
+           srvc.SignInUserPost(this.$router);
          }
      },event);
   }
