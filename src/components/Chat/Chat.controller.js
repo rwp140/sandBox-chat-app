@@ -16,20 +16,22 @@ module.exports = {
     ActionSelection:actionSelection,
     ChatTopBar:chatTopBar
   },
+  props:['chatID'],
   mounted:LoadChat
 }
 //Variables
   //public
   var data = {};
-  data.chatID = 0;
+  // data.chatID = 0;
   data.messages = [{SenderName:"System",content:"No messages yet.",direction:"right"}];
   data.contacts = ["error name not saved to DB"];
   //private
 //Function
   //public
   function LoadChat(){
-      data.chatID = store.state.chatID;
-      let chat = svc.LoadChat(data.chatID);
+      // data.chatID = store.state.chatID;
+      console.log(this.chatID);
+      let chat = svc.LoadChat(this.chatID);
       if(chat){
         data.messages = chat.messages;
         data.contacts = chat.contacts;
