@@ -1,6 +1,5 @@
 <template>
-  <div class="TopBar">
-    <div id="back" v-on:click="back($router)">
+  <div class="TopBar">="back($router)">
       <span ><-back</span>
     </div>
     <div v-for="recipient in recipients">
@@ -35,7 +34,6 @@ span, h1{
 .TopBar{
   background-color: pearl;
   border-bottom: black solid 1px;
-  /* min-height: 10%; */
   height: 5%;
   max-width:100%;
   text-align: left;
@@ -46,6 +44,5 @@ span, h1{
 #back :hover{
   background-color: rgb(1,1,1);
   background-color: rgba(0,0,0,0.2);
-  /* color:rgb(200,200,200); */
 }
 </style>

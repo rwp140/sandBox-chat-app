@@ -32,6 +32,5 @@ export default {
   justify-content: space-between;
   padding: 5px;
   height: 6em;
-  /* background-color: blue; */
 }
 </style>
