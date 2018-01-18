@@ -1,61 +1,40 @@
 
 <div id="background">
-<div class="container">
-<!-- {{msg}} -->
-  <PopUp :msg="msg" :closeModal="closeModal" />
-  <ForgotPasswordForm :functionCall="SendForgotPassForm"/>
-  <NewPasswordForm/>
-  <NewUserForm :functionCall="SendNewUserForm"/>
+  <div class="container">
+  <!-- {{msg}} -->
+    <PopUp :msg="msg" :closeModal="closeModal" />
+    <ForgotPasswordForm :functionCall="SendForgotPassForm"/>
+    <NewPasswordForm/>
+    <NewUserForm :functionCall="SendNewUserForm"/>
+
     <div class="jumbotron" id="title">
-
         <h1 class="display-3">Sandbox Chat App</h1>
-
     </div>
 
     <div class="well col-centered" id="wellformat">
-
         <div class="row">
-
             <div class="col-md-3"></div>
-
             <div class="col-md-6">
-
                 <form>
-
                     <div>
-
                         <p>Username:</p>
                         <input type="text" name="username" v-model="username" value=""/><br>
-
                     </div>
-
                     <div class="space"></div>
-
                     <div>
-
                         <p>Password:</p>
                         <input type="password" name="password" v-model="password" value=""/><br>
-
                     </div>
-
                     <div>
-
                         <button id="logInButton" class="btn-primary" v-on:click="LogIn($event,$router)">Sign In</button>
-
                         <!-- <button id="signInButton" class="btn-primary" v-on:click="OpenNewUserForm">Sign Up</button> -->
-
                     </div>
-
                     <a href="#" v-on:click="OpenForgotPassForm">Forgot your password?</a>
-
                 </form>
-
             </div>
             <div class="col-md-3"></div>
-
         </div>
-
     </div>
 
-</div>
+  </div>
 </div>
