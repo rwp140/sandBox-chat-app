@@ -6,33 +6,55 @@ const NewPasswordForm = require('./subComponents/NewPasswordForm').default;
 const NewUserForm = require('./subComponents/NewUserForm').default;
 const PopUp = require('./subComponents/PopUp').default;
 
-//Exports
-module.exports = {
-  name: 'SignIn',
-  data () {
-    return data
-  },
-  methods: {
-    closeModal:closeModal,
-    LogIn:LogIn,
-    OpenForgotPassForm:OpenForgotPassForm,
-    OpenNewUserForm:OpenNewUserForm,
-    SendForgotPassForm:SendForgotPassForm,
-    SendNewUserForm:SendNewUserForm
-  },
-  components: {ForgotPasswordForm,NewPasswordForm,NewUserForm,PopUp}//other components and templates go here
-}
 // Variables
+  //private
+  var modal = document.getElementById('general-Pop-Up');
   //public
   var data = {};
   data.msg = "Forgot Password?";
   data.username = "Anna@email.com";
   data.password = "Password";
-  //private
-  var modal = document.getElementById('general-Pop-Up');
 //Functions
+  //Private
+  /*
+  * Sets up anything needed on mobile platform, disables default event, and runs
+  * any algorythm we make to determin the user genuinly pressed the button
+  */
+  function buttonCheck(callBack,event){
 
-  //public
+    event.preventDefault();
+    callBack()
+  }
+  function EncryptPass(pass){
+
+    return pass;
+  }
+  /*
+  * Runs any form validation we need
+  */
+  function FormValidation(){
+    var bool = true;
+
+
+    return bool;
+  }
+  /*
+  * Runs any data validation we need
+  */
+  function InputValidation(IllegalChars,string){
+    var bool = true;
+
+    for(let i =0,l = IllegalChars.length;(i<l && bool==true);i++){
+      let illegalChar = IllegalChars[i];
+      for(let j=0,c=string.length;(j<c&&bool==true);j++){
+        let char = string[j];
+        if(char == illegalChar)bool == false
+      }
+    }
+
+    return bool;
+  }
+  //public----------------------------------------------------------------------
   function closeModal(){
     modal.style.display='none';
   }
@@ -74,44 +96,20 @@ module.exports = {
        closeModal();
      },event);
   }
-  //Private
-  /*
-  * Sets up anything needed on mobile platform, disables default event, and runs
-  * any algorythm we make to determin the user genuinly pressed the button
-  */
-  function buttonCheck(callBack,event){
 
-    event.preventDefault();
-    callBack()
-  }
-  function EncryptPass(pass){
-
-    return pass;
-  }
-  /*
-  * Runs any form validation we need
-  */
-  function FormValidation(){
-    var bool = true;
-
-
-    return bool;
-  }
-  /*
-  * Runs any data validation we need
-  */
-  function InputValidation(IllegalChars,string){
-    var bool = true;
-
-    for(let i =0,l = IllegalChars.length;(i<l && bool==true);i++){
-      let illegalChar = IllegalChars[i];
-      for(let j=0,c=string.length;(j<c&&bool==true);j++){
-        let char = string[j];
-        if(char == illegalChar)bool == false
-      }
-    }
-
-    return bool;
-  }
-
-//Event listeners
+//Exports
+module.exports = {
+  name: 'SignIn',
+  data () {
+    return data
+  },
+  methods: {
+    closeModal:closeModal,
+    LogIn:LogIn,
+    OpenForgotPassForm:OpenForgotPassForm,
+    OpenNewUserForm:OpenNewUserForm,
+    SendForgotPassForm:SendForgotPassForm,
+    SendNewUserForm:SendNewUserForm
+  },
+  components: {ForgotPasswordForm,NewPasswordForm,NewUserForm,PopUp}//other components and templates go here
+}
