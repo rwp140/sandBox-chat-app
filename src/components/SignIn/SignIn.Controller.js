@@ -21,12 +21,11 @@ const PopUp = require('./subComponents/PopUp').default;
   * any algorythm we make to determin the user genuinly pressed the button
   */
   function buttonCheck(callBack,event){
-
     event.preventDefault();
     callBack()
   }
   function EncryptPass(pass){
-
+    //encrypt
     return pass;
   }
   /*
@@ -34,8 +33,7 @@ const PopUp = require('./subComponents/PopUp').default;
   */
   function FormValidation(){
     var bool = true;
-
-
+    //validation checks
     return bool;
   }
   /*
@@ -43,7 +41,7 @@ const PopUp = require('./subComponents/PopUp').default;
   */
   function InputValidation(IllegalChars,string){
     var bool = true;
-
+    //character check
     for(let i =0,l = IllegalChars.length;(i<l && bool==true);i++){
       let illegalChar = IllegalChars[i];
       for(let j=0,c=string.length;(j<c&&bool==true);j++){
