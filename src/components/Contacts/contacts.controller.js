@@ -30,9 +30,8 @@ const store = require('../../store');
   function LoadProfile() {
 
   }
-  function LoadNewChat(event, router,ID) {
-
-    svc.LoadChat(router,ID);
+  function LoadNewChat(event,ID) {
+    svc.LoadChat(this.$router,ID);
   }
   function RenderContactsList() {
 
