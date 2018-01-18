@@ -22,8 +22,9 @@ const store = require('../../store');
 //Functions
   //Public
   export function LoadChat(rotuer,ID){
-    store.state.chatID = ID
-    rotuer.push({ path: '/chat' });
+    // store.state.chatID = ID
+    let path_ = '/chat/'+ID;
+    rotuer.push({ path:path_ });
   }
   export function RENDERContactsListGET(){
     //set up promise
