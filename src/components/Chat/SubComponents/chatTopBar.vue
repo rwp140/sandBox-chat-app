@@ -1,5 +1,6 @@
 <template>
-  <div class="TopBar">="back($router)">
+  <div class="TopBar">
+    <div id="back" v-on:click.native="back($router)">
       <span ><-back</span>
     </div>
     <div v-for="recipient in recipients">
