@@ -53,15 +53,12 @@ const store = require('../../store');
   export function LoadChat(ID){
     //route
     //dummy code
-    console.log(ID);
     let mesagesData = [{SenderName:"System",content:"No messages yet.",direction:"right"}];
     let found = false;
     for(let i=0,l=dummyData.length; i<l&&!found; i++)
     {
       let chatID = dummyData[i].chatID;
-      console.log("checking",ID,chatID);
       if(ID==chatID){
-        console.log("found",ID,chatID);
         mesagesData = dummyData[i];
         found = true;
       } else {
@@ -74,7 +71,6 @@ const store = require('../../store');
         }
       }
     }
-    console.log(mesagesData);
     return mesagesData;
   }
   //Private
