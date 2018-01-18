@@ -1,6 +1,6 @@
 <template>
   <div class="TopBar">
-    <div id="back" v-on:click.native="back($router)">
+    <div id="back" v-on:click="back">
       <span ><-back</span>
     </div>
     <div v-for="recipient in recipients">
@@ -18,9 +18,9 @@ export default {
   },
   props: ['recipients'],
   methods:{
-    back:function (router){
+    back:function (){
       console.log("hey");
-      router.push({ path: '/contacts' })
+      this.$router.push({ path: '/contacts' })
     }
   }
 }
