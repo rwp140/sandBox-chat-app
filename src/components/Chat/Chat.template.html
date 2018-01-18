@@ -1,5 +1,5 @@
 <div class="">
-  <chatTopBar :recipients="contacts" v-on:click.native="loadContacts($router)"/>
+  <chatTopBar :recipients="contacts"/>
   <div id = "messages" v-for="message of messages" :key="message.id">
     <MessageItem :sender="message.SenderName" senderIcon="empty" :content="message.content" :direction="message.direction" style=""/>
   </div>

@@ -16,9 +16,6 @@ module.exports = {
     ActionSelection:actionSelection,
     ChatTopBar:chatTopBar
   },
-  methods: {
-    loadContacts:loadContacts
-  },
   mounted:LoadChat
 }
 //Variables
@@ -37,8 +34,5 @@ module.exports = {
         data.messages = chat.messages;
         data.contacts = chat.contacts;
       }
-  }
-  function loadContacts(router){
-    router.push({ path: '/contacts' })
   }
   //private
