@@ -30,7 +30,6 @@ module.exports = {
   data.password = "Password";
   //private
   var modal = document.getElementById('general-Pop-Up');
-  //getElementById('myModal');
 //Functions
 
   //public
@@ -48,35 +47,25 @@ module.exports = {
         if(InputValidation(illegalUserChars,data.username))
          if(InputValidation(illegalPassChars,data.password)){
            data.password = EncryptPass(data.password);
-           // console.log(data.username);
-           // console.log(data.password);
-           // console.log(router);
-          srvc.SignInUserPost(router);
+           srvc.SignInUserPost(router);
          }
      },event);
   }
   function OpenForgotPassForm(event){
     buttonCheck(()=>{
       modal = document.getElementById('forgot-pass-form');
-      // console.log(modal);
-      // console.log('forgot user?');
-      // console.log(data.msg);
       modal.style.display='block';
     },event);
   }
   function OpenNewUserForm(event){
      buttonCheck(()=>{
        modal = document.getElementById('new-user-form');
-
        modal.style.display='block';
      },event);
   }
   function SendForgotPassForm(event){
     buttonCheck(()=>{
       modal = document.getElementById('forgot-pass-form');
-      // console.log(modal);
-      // console.log('sending token');
-      // console.log(data.msg);
       closeModal();
     },event);
   }

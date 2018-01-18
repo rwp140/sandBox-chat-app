@@ -18,11 +18,6 @@ module.exports = {
   },
   mounted: RENDERContactsItem
 }
-// console.log(store);
-// console.log(store.state);
-store.state.test = 'test';
-// console.log(store);
-// console.log(store.state);
 //Variables
   //Public
   var data = {};
@@ -40,12 +35,7 @@ store.state.test = 'test';
 
   }
   function LoadNewChat(event, router,ID) {
-    // console.log(svc);
-    // console.log('test');
-    // console.log(ID);
-    // let num = Math.random();
-    // console.log('num',num);
-    // store.state.chatID= num;
+
     svc.LoadChat(router,ID);
   }
   function RenderContactsList() {
@@ -64,8 +54,6 @@ store.state.test = 'test';
   function RENDERContactsItem(string){
     svc.RENDERContactsListGET().then((val)=>{
       data.Contacts=val;
-      // console.log(val);
-      // console.log(data.contacts);
     }).catch((message)=>{
 
     });

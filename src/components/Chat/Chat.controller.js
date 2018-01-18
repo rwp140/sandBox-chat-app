@@ -21,8 +21,6 @@ module.exports = {
   },
   mounted:LoadChat
 }
-// console.log(store);
-// console.log(store.state);
 //Variables
   //public
   var data = {};
@@ -33,19 +31,12 @@ module.exports = {
 //Function
   //public
   function LoadChat(){
-    // console.log("loading chat");
-    // let chatID = store.state.chatID;
-    //this.$nextTick(function(){
       data.chatID = store.state.chatID;
-      // console.log("chatID", data.chatID,store.state.chatID);
-      // console.log("chatID", data.chatID,store.state.chatID);
       let chat = svc.LoadChat(data.chatID);
       if(chat){
         data.messages = chat.messages;
         data.contacts = chat.contacts;
-        // console.log(data.messages);
       }
-    // })
   }
   function loadContacts(router){
     router.push({ path: '/contacts' })
