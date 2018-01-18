@@ -4,9 +4,7 @@ const store = require('../../store');
 // module.exports = {
 //   test:test,LoadChat:LoadChat,RENDERContactsListGET:RENDERContactsListGET
 // }
-export function test() {
-  console.log('test!');
-}
+
 //Varaibles
   //Public
   //Private
