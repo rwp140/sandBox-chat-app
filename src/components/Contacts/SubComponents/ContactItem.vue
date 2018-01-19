@@ -4,7 +4,10 @@
       <div class="receiptentIcon"><img/></div>
       <div class='userName'>{{userName}}</div>
     </div>
-    <div class='receipt'>...</div>
+    <div class='receipt'>
+      <div class="receiptIcon"><img/></div>
+      <div class="receiptIcon"><img/></div>
+    </div>
   </div>
 </template>
 
@@ -39,8 +42,19 @@ export default {
   padding: 1em;
 }
 .receipt{
-  display: inline-block;
+  display: flex;
+  align-self:flex-end;
   text-align: right;
+  flex-direction: row;
+}
+.receiptIcon{
+  border-radius: 50%;
+  border: black solid 0.2em;
+  background-color: rgba(0,0,0,0.1);/*grey; */
+  flex-grow: 0.1;
+  margin: 0.2em;
+  width: 1em;
+  height: 1em;
 }
 .Contact-Item{
   border: black 1px solid;
