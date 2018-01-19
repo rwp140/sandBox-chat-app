@@ -5,12 +5,10 @@
       <div  v-if="direction=='right'"class="message-Sender">
         <img/>
       </div>
-      <div class ="message-Content">
+      <p class ="message-Content">
         {{content}}
-      </div>
-      <div v-if="direction=='left'" class="message-Sender">
-        <img/>
-      </div>
+      </p>
+      <img v-if="direction=='left'" class="message-Sender" />
     </div>
     <div v-if="direction=='right'" class="spacer"></div>
     <br>
@@ -32,9 +30,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   div{
-    /* background-color: lightblue;
-    text-align: left;
-    padding: 1%; */
   }
   .wrapper{
     background-color: inherit;
@@ -50,7 +45,6 @@ export default {
   .Message-Item{
     background-color: lightblue;
     text-align: left;
-    word-wrap:break-word;
     display: flex;
     justify-content: space-between;
     width: 50%;
@@ -60,10 +54,11 @@ export default {
   .message-Sender{
     border-radius: 50%;
     border: black solid 0.2em;
-    background-color: rgba(0,0,0,0.1);/*grey; */
-    /* flex-grow: 0.1; */
+    background-color: rgba(0,0,0,0.1);
+    flex-shrink:0;
     width: 2em;
     height: 2em;
-    margin: 0em 1em;
+  }
+  .message-Content{
   }
 </style>
