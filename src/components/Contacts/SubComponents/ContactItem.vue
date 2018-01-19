@@ -1,6 +1,10 @@
 <template>
   <div class="Contact-Item">
-    <div class='userName'>{{userName}}</div> <div class='receipt'>...</div>
+    <div class='userDetails'>
+      <div class="receiptentIcon"><img/></div>
+      <div class='userName'>{{userName}}</div>
+    </div>
+    <div class='receipt'>...</div>
   </div>
 </template>
 
@@ -18,8 +22,21 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.userDetails{
+  display: flex;
+  /* display: inline-block; */
+}
+.receiptentIcon{
+  border-radius: 50%;
+  border: black solid 0.2em;
+  background-color: rgba(0,0,0,0.1);/*grey; */
+  flex-grow: 1;
+  width: 5.2em;
+  margin: 0em 1em;
+}
 .userName{
-  display: inline-block;
+  align-self: center;
+  padding: 1em;
 }
 .receipt{
   display: inline-block;
