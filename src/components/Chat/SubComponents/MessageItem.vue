@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="message-wrapper">
     <div v-if="direction=='left'" class="spacer"></div>
     <div class="Message-Item">
       <div  v-if="direction=='right'"class="message-Sender">
@@ -31,7 +31,7 @@ export default {
 <style scoped>
   div{
   }
-  .wrapper{
+  .message-wrapper{
     background-color: inherit;
     display: flex;
     width: 100%;

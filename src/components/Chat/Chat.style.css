@@ -4,3 +4,26 @@
 .text-wrapper input{
   flex-grow:1;
 }
+.spacer{
+  background-color: inherit;
+  /* width:50%; */
+  flex-grow: 1;
+  height: 10px;
+  display: inline;
+}
+#reciept{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#reciept div{
+}
+.message-Reciept{
+  border-radius: 50%;
+  border: black solid 0.2em;
+  background-color: rgba(0,0,0,0.1);/*grey; */
+  /* flex-grow: 0; */
+  margin: 0.2em;
+  width: 1em;
+  height: 1em;
+}
