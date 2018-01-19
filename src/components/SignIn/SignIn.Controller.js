@@ -59,7 +59,7 @@ const PopUp = require('./subComponents/PopUp').default;
   /*
   * Logs user in
   */
-  function LogIn(event,r){
+  function LogIn(event){
      buttonCheck(()=>{
        let illegalUserChars =['*']
        let illegalPassChars =['*'];
@@ -109,5 +109,9 @@ module.exports = {
     SendForgotPassForm:SendForgotPassForm,
     SendNewUserForm:SendNewUserForm
   },
-  components: {ForgotPasswordForm,NewPasswordForm,NewUserForm,PopUp}//other components and templates go here
+  components: {
+    ForgotPasswordForm,
+    NewPasswordForm,
+    NewUserForm,PopUp
+  }
 }
