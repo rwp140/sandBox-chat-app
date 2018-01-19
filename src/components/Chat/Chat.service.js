@@ -2,16 +2,12 @@
 const store = require('../../store');
 
 //Exports
-module.exports ={
-  LoadChat
-}
+// module.exports ={
+//   LoadChat
+// }
 //Variables
   //public
   //private
-    // {Pid:11992,Name:'Lena'},
-    // {Pid:19291,Name:'Mike'},
-    // {Pid:21219,Name:'Kevin'},
-    // {Pid:292922,Name:'Jesse'}
   var dummyData= [{
     chatID:'bot',
     contacts:["Chat-Bot"],
@@ -54,19 +50,15 @@ module.exports ={
   }];
 //Functions
   //Public
-  function LoadChat(ID){
+  export function LoadChat(ID){
     //route
     //dummy code
-    console.log(ID);
     let mesagesData = [{SenderName:"System",content:"No messages yet.",direction:"right"}];
     let found = false;
     for(let i=0,l=dummyData.length; i<l&&!found; i++)
     {
       let chatID = dummyData[i].chatID;
-      console.log("checking",ID,chatID);
       if(ID==chatID){
-        console.log("found",ID,chatID);
-        // console.log(dummyData);
         mesagesData = dummyData[i];
         found = true;
       } else {
@@ -79,7 +71,6 @@ module.exports ={
         }
       }
     }
-    console.log(mesagesData);
     return mesagesData;
   }
   //Private

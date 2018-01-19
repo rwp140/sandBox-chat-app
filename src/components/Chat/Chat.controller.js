@@ -4,6 +4,28 @@ const actionSelection = require('./SubComponents/actionSelection').default;
 const chatTopBar = require('./SubComponents/chatTopBar').default;
 const store = require('../../store');
 
+//================================= Variables ==================================
+  //private
+  //public
+  var data = {};
+  // data.chatID = 0;
+  data.messages = [{SenderName:"System",content:"No messages yet.",direction:"right"}];
+  data.contacts = ["error name not saved to DB"];
+
+//================================= Function ===================================
+
+  //private
+  //public
+  function LoadChat(){
+      // data.chatID = store.state.chatID;
+      console.log(this.chatID);
+      let chat = svc.LoadChat(this.chatID);
+      if(chat){
+        data.messages = chat.messages;
+        data.contacts = chat.contacts;
+      }
+  }
+
 const svc = require('./Chat.service.js')
 //Exports
 module.exports = {
@@ -16,38 +38,6 @@ module.exports = {
     ActionSelection:actionSelection,
     ChatTopBar:chatTopBar
   },
-  methods: {
-    loadContacts:loadContacts
-  },
+  props:['chatID'],
   mounted:LoadChat
 }
-// console.log(store);
-// console.log(store.state);
-//Variables
-  //public
-  var data = {};
-  data.chatID = 0;
-  data.messages = [{SenderName:"System",content:"No messages yet.",direction:"right"}];
-  data.contacts = ["error name not saved to DB"];
-  //private
-//Function
-  //public
-  function LoadChat(){
-    // console.log("loading chat");
-    // let chatID = store.state.chatID;
-    //this.$nextTick(function(){
-      data.chatID = store.state.chatID;
-      // console.log("chatID", data.chatID,store.state.chatID);
-      // console.log("chatID", data.chatID,store.state.chatID);
-      let chat = svc.LoadChat(data.chatID);
-      if(chat){
-        data.messages = chat.messages;
-        data.contacts = chat.contacts;
-        // console.log(data.messages);
-      }
-    // })
-  }
-  function loadContacts(router){
-    router.push({ path: '/contacts' })
-  }
-  //private
