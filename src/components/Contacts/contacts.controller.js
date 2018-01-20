@@ -14,6 +14,7 @@ const store = require('../../store');
     {Pid:'contacts not loaded',Name:'if this persists please contact:(###)###-####'},
     {Pid:'contacts not loaded',Name:'(###)###-#### or ####@####.com'}
   ];
+  data.chatbotName=['chat-bot'];
 //================================ Functions ===================================
   //Private --------------------------------------------------------------------
   /*

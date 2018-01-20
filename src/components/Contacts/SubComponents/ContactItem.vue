@@ -2,11 +2,11 @@
   <div class="Contact-Item">
     <div class='userDetails'>
       <div class="receiptentIcon"><img/></div>
-      <div class='userName'>{{userName}}</div>
+      <div v-for="(name,index) of names" class='userName'>{{name}}<span v-if="index<names.length-1">,</span></div>
     </div>
     <div class='receipt'>
-      <div class="receiptIcon"><img/></div>
-      <div class="receiptIcon"><img/></div>
+      <div v-for="receipt of ReadReceipt" class="receiptIcon" v-if="receipt.readLine==1" ><img/></div>
+      <!-- <div class="receiptIcon"><img/></div> -->
     </div>
   </div>
 </template>
@@ -19,7 +19,7 @@ export default {
       msg: ''
     }
   },
-  props: ['userName','ReadReceipt']
+  props: ['names','ReadReceipt']
 }
 </script>
 

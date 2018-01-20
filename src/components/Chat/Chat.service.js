@@ -27,18 +27,19 @@ const store = require('../../store');
   {
     chatID:'11992',
     contacts:[
-      {Name:"Lena",ID:11992,img:"none",readLine:0},
-      {Name:"anna",ID:72010154,img:"none",readLine:1}
+      {Name:"Lena",ID:11992,img:"none",readLine:1},
+      {Name:"anna",ID:72010154,img:"none",readLine:2}
     ],
     messages:[
       {SenderName:"Lena",content:"Hello Anna",direction:"right"},
-      {SenderName:"Anna",content:"yo Lena!",direction:"left"}
+      {SenderName:"Anna",content:"yo Lena!",direction:"left"},
+      {SenderName:"Anna",content:"How was your day?",direction:"left"}
     ]
   },
   {
     chatID:'19291',
     contacts:[
-      {Name:"Mike",ID:19291,img:"none",readLine:0},
+      {Name:"Mike",ID:19291,img:"none",readLine:1},
       {Name:"anna",ID:72010154,img:"none",readLine:1}
     ],
     messages:[
@@ -49,7 +50,7 @@ const store = require('../../store');
   {
     chatID:'21219',
     contacts:[
-      {Name:"Kevin",ID:21219,img:"none",readLine:0},
+      {Name:"Kevin",ID:21219,img:"none",readLine:1},
       {Name:"anna",ID:72010154,img:"none",readLine:1}
     ],
     messages:[
@@ -60,7 +61,7 @@ const store = require('../../store');
   {
     chatID:'292922',
     contacts:[
-      {Name:"Jesse",ID:292922,img:"none",readLine:0},
+      {Name:"Jesse",ID:292922,img:"none",readLine:1},
       {Name:"anna",ID:72010154,img:"none",readLine:1}
     ],
     messages:[
