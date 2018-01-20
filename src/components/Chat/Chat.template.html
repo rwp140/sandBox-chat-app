@@ -1,12 +1,13 @@
 <div class="">
   <chatTopBar :recipients="contacts"/>
-  <div id = "messages" v-for="message of messages" :key="message.id">
+  <div id = "messages" v-for="(message, index) of messages" :key="message.id">
     <MessageItem :sender="message.SenderName" senderIcon="empty" :content="message.content" :direction="message.direction" style=""/>
-    <div v-if="message.read" id="reciept">
+    <div id="reciept">
       <div v-if="message.direction == 'left'"  class="spacer"/>
-      <div>
-        <img class="message-Reciept" />
-        <img class="message-Reciept" />
+      <div  v-for="contact of contacts">
+        <!-- {{index}} -->
+        <img class="message-Reciept" v-if="contact.readLine==index"/>
+        <!-- <img class="message-Reciept" /> -->
       </div>
       <div v-if="message.direction == 'right'"  class="spacer"/>
       <br>

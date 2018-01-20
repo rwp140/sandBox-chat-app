@@ -3,8 +3,8 @@
     <div id="back" v-on:click="back">
       <span ><-back</span>
     </div>
-    <div v-for="recipient in recipients">
-       <span>{{recipient}}</span>
+    <div class="chat-recipients" v-for="recipient in recipients">
+       <span>{{recipient.Name}}</span>
     </div>
   </div>
 </template>
@@ -29,8 +29,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 span, h1{
-  display: inline-block;
-  height: inherit;
+  /* display: inline-block; */
+  /* height: inherit; */
 }
 .TopBar{
   background-color: pearl;
