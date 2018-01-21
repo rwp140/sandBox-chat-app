@@ -67,7 +67,18 @@ const PopUp = require('./subComponents/PopUp').default;
         if(InputValidation(illegalUserChars,data.username))
          if(InputValidation(illegalPassChars,data.password)){
            data.password = EncryptPass(data.password);
-           srvc.SignInUserPost(this.$router);
+           let userData = {
+             username:data.username,
+             password:data.password
+           }
+           srvc.SignInUserPost(this.$router,userData);
+           // .then((pid)=>{
+           //   // console.log(pid);
+           //
+           // }).catch((reason)=>{
+           //   console.error(reason);
+           // });
+           // // console.log(pid);
          }
      },event);
   }
