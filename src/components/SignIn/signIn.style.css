@@ -1,5 +1,9 @@
 #background {
     background-image: url("./Images/sandbox-1583289_1920.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: max-content;
+    height: -webkit-fill-available;
 }
 
 #title {
