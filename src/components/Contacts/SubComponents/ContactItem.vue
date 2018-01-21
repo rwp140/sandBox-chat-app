@@ -2,7 +2,10 @@
   <div class="Contact-Item">
     <div class='userDetails'>
       <div class="receiptentIcon"><img/></div>
-      <div v-for="(name,index) of names" class='userName'>{{name}}<span v-if="index<names.length-1">,</span></div>
+      <div v-for="(name,index) of names" class='userName'>
+        {{name}}
+        <span v-if="index<names.length-1">,</span>
+      </div>
     </div>
     <div class='receipt'>
       <div v-for="receipt of ReadReceipt" class="receiptIcon" v-if="receipt.readLine==1" ><img/></div>
