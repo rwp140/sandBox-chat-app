@@ -1,6 +1,8 @@
 //imports
 // const Router = require('../.././router/index').default;
 const store = require('../../store');
+const FauxServer = require('../FauxDataBase/FauxServer');
+
 // module.exports = {
 //   test:test,LoadChat:LoadChat,RENDERContactsListGET:RENDERContactsListGET
 // }
