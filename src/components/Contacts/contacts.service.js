@@ -66,7 +66,7 @@ const store = require('../../store');
   ];
 //Functions
   //Public
-  export function LoadChat(rotuer,ID){
+  export function LoadChatPage(rotuer,ID){
     // store.state.chatID = ID
     let path_ = '/chat/'+ID;
     rotuer.push({ path:path_ });

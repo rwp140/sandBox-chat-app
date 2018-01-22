@@ -32,7 +32,7 @@ const store = require('../../store');
 
   }
   function LoadNewChat(event,ID) {
-    svc.LoadChat(this.$router,ID);
+    svc.LoadChatPage(this.$router,ID);
   }
   function RenderContactsList() {
 
