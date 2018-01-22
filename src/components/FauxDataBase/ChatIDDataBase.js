@@ -6,7 +6,12 @@
 //    },
 //    {
 //      pid: number
-//      chats[<ChatID>]
+//      chats:[<ChatID>]
 //    }
 //  ]
 //}
+export function data(){
+  return [
+      {PID:72010154,chats:["72010154-11992"]}
+    ];
+}
