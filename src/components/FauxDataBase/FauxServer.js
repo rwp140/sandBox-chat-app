@@ -1,11 +1,12 @@
 const userController = require('./FauxUserController');
+const contactsController = require('./FauxContactsController');
 
 
 export function test() {
   console.log('test');
 }
 export function get(path,_data){
-  let data_ ={test:"test"};
+  let data_ = {test:"test"};
   // console.log(_data);
   return new Promise((resolve, reject) => {
     //set route
@@ -22,6 +23,14 @@ export function get(path,_data){
           }).catch((reason)=>{
             reject(reason);
           });
+          break;
+          case "/contacts":
+            contactsController.GetContacts(_data)
+              .then((val)=>{
+                resolve(val);
+              }).catch((reason)=>{
+                reject(reason);
+              })
           break;
       }
     // resolve(data_);

@@ -22,9 +22,10 @@ const store = require('../../store');
   */
   function RENDERContactsItem(string){
     svc.RENDERContactsListGET().then((val)=>{
+      console.log(val);
       data.Contacts=val;
     }).catch((message)=>{
-
+      console.error(message);
     });
   }
   //Public ---------------------------------------------------------------------

@@ -78,8 +78,16 @@ const FauxServer = require('../FauxDataBase/FauxServer');
     return new Promise((resolve, reject) => {
       //set route
       //get route
+      FauxServer.get('/contacts',store.state.PID)
+        .then((val)=>{
+          console.log(val);
+          console.log(testContactsData);
+          // resolve(testContactsData);
+
+        }).catch((reasons)=>{
+          reject(reasons);
+        })
         //resolve promise
-      resolve(testContactsData);
         //reject promise
     });
   }
