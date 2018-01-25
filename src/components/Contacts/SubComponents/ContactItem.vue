@@ -2,9 +2,9 @@
   <div class="Contact-Item">
     <div class='userDetails'>
       <div class="receiptentIcon"><img/></div>
-      <div v-for="(name,index) of names" class='userName'>
-        {{name}}
-        <span v-if="index<names.length-1">,</span>
+      <div v-for="(receipt,index) of ReadReceipt" class='userName'>
+        <span v-if="index<ReadReceipt.length-1 || (ReadReceipt.length == 1 && ReadReceipt.length< 2) ">{{receipt.Name}}</span>
+        <span v-if="index<ReadReceipt.length-2">,</span>
       </div>
     </div>
     <div class='receipt'>

@@ -81,8 +81,9 @@ const FauxServer = require('../FauxDataBase/FauxServer');
       FauxServer.get('/contacts',store.state.PID)
         .then((val)=>{
           console.log(val);
-          console.log(testContactsData);
-          // resolve(testContactsData);
+          // console.log(testContactsData);
+          // let contactsOBj ={}
+          resolve(val);
 
         }).catch((reasons)=>{
           reject(reasons);

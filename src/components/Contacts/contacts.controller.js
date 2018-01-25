@@ -10,22 +10,30 @@ const store = require('../../store');
   var data = {};
   data.msg ='Welcome to contacts';
   data.Contacts = [
-    {Pid:'contacts not loaded',Name:'contacts not loaded'},
-    {Pid:'contacts not loaded',Name:'if this persists please contact:(###)###-####'},
-    {Pid:'contacts not loaded',Name:'(###)###-#### or ####@####.com'}
+    {Pid:'contacts not loaded',ReadReciept:[{Name:'contacts not loaded'}]},
+    {Pid:'contacts not loaded',ReadReciept:[{Name:'if this persists please contact:(###)###-####'}]},
+    {Pid:'contacts not loaded',ReadReciept:[{Name:'(###)###-#### or ####@####.com'}]}
   ];
-  data.chatbotName=['chat-bot'];
+  data.chatbot={ReadReciept:[{Name:'chat-bot'}]};
 //================================ Functions ===================================
   //Private --------------------------------------------------------------------
   /*
   * Passes data to a new Contacts Item Template
   */
   function RENDERContactsItem(string){
+    console.log(data.Contacts);
+
     svc.RENDERContactsListGET().then((val)=>{
-      console.log(val);
+      // console.log(data.Contacts);
+      // console.log(val);
       data.Contacts=val;
+      // console.log(data.Contacts);
+      // console.log(data.Contacts[0]);
+      // console.log(data.Contacts[0].ReadReciept);
+      // console.log(data.Contacts[0].ReadReciept[0]);
+      // console.log(data.Contacts[0].ReadReciept[0].Name);
     }).catch((message)=>{
-      console.error(message);
+      console.error("error message",message);
     });
   }
   //Public ---------------------------------------------------------------------
