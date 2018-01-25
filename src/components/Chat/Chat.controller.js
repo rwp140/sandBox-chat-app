@@ -20,7 +20,7 @@ const store = require('../../store');
   //public
   function LoadChat(){
       // data.chatID = store.state.chatID;
-      console.log('chatID',this.chatID);
+      // console.log('chatID',this.chatID);
       // let chat = svc.LoadChat(this.chatID);
       // if(chat){
       //   data.messages = chat.messages;
@@ -28,7 +28,7 @@ const store = require('../../store');
       // }
       svc.LoadChat(this.chatID)
         .then((val)=>{
-          console.log("val got");
+          // console.log("val got");
           data.messages = val.messages;
           data.contacts = val.ReadReceipt;
         })

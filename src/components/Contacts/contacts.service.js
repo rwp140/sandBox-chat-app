@@ -1,4 +1,4 @@
-//imports
+imports
 // const Router = require('../.././router/index').default;
 const store = require('../../store');
 const FauxServer = require('../FauxDataBase/FauxServer');
@@ -79,10 +79,10 @@ const FauxServer = require('../FauxDataBase/FauxServer');
       //set route
       //get route
       let PID = localStorage.PID || store.state.PID
-      console.log("your PID is ",PID);
+      // console.log("your PID is ",PID);
       FauxServer.get('/contacts',PID)
         .then((val)=>{
-          console.log(val);
+          // console.log(val);
           // console.log(testContactsData);
           // let contactsOBj ={}
           resolve(val);

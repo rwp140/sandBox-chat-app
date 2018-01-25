@@ -33,7 +33,7 @@ export function get(path,_data){
               })
           break;
           case "/chat":
-            console.log("loading chat");
+            // console.log("loading chat");
             chatController.GetChat(_data)
               .then((val)=>{
                 resolve(val);

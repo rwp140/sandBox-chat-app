@@ -15,15 +15,15 @@ const FauxServer = require('../FauxDataBase/FauxServer');
 //Functions
   //public
   export function SignInUserPost(router,userData){
-    console.log('signing in user');
+    // console.log('signing in user');
 
     FauxServer.get('/user',userData)
       .then((_data)=>{
         // console.log("promise");
-        console.log(_data);
+        // console.log(_data);
         // LoadContactsPage(router);
         store.state.PID = _data.pid;
-        console.log(store.state);
+        // console.log(store.state);
         LoadContactsPage(router);
          // _data;
       }).catch((message)=>{

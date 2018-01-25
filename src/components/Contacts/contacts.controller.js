@@ -21,11 +21,11 @@ const store = require('../../store');
   * Passes data to a new Contacts Item Template
   */
   function RENDERContactsItem(string){
-    console.log(data.Contacts);
-    console.log('pid check 1',localStorage.PID);
+    // console.log(data.Contacts);
+    // console.log('pid check 1',localStorage.PID);
     if(store.state.PID)
       localStorage.PID = store.state.PID;
-    console.log('pid check 2',localStorage.PID);
+    // console.log('pid check 2',localStorage.PID);
     // data.PID = store.state.PID;
     svc.RENDERContactsListGET().then((val)=>{
       // console.log(data.Contacts);

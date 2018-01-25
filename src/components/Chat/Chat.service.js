@@ -75,11 +75,11 @@ const FauxServer = require('../FauxDataBase/FauxServer');
   export function LoadChat(chatID){
     //route
     //dummy code
-    console.log("getting chat");
+    // console.log("getting chat");
     return new Promise((resolve, reject) =>{
       FauxServer.get('/chat',chatID)
         .then((val)=>{
-          console.log('val',val);
+          // console.log('val',val);
           resolve(val);
         }).catch((reason)=>{
           reject(reason);
