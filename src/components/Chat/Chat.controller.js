@@ -2,6 +2,8 @@
 const MessageItem = require('./SubComponents/MessageItem').default;
 const actionSelection = require('./SubComponents/actionSelection').default;
 const chatTopBar = require('./SubComponents/chatTopBar').default;
+
+const svc = require('./Chat.service.js');
 const store = require('../../store');
 
 //================================= Variables ==================================
@@ -18,15 +20,23 @@ const store = require('../../store');
   //public
   function LoadChat(){
       // data.chatID = store.state.chatID;
-      console.log(this.chatID);
-      let chat = svc.LoadChat(this.chatID);
-      if(chat){
-        data.messages = chat.messages;
-        data.contacts = chat.contacts;
-      }
+      console.log('chatID',this.chatID);
+      // let chat = svc.LoadChat(this.chatID);
+      // if(chat){
+      //   data.messages = chat.messages;
+      //   data.contacts = chat.contacts;
+      // }
+      svc.LoadChat(this.chatID)
+        .then((val)=>{
+          console.log("val got");
+          data.messages = val.messages;
+          data.contacts = val.ReadReceipt;
+        })
+        .catch((reason)=>{
+          console.error(reason);
+        });
   }
 
-const svc = require('./Chat.service.js')
 //Exports
 module.exports = {
   name: 'Chat',

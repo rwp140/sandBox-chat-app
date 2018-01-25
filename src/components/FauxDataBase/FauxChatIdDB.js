@@ -12,6 +12,9 @@
 //}
 export function data(){
   return [
-      {PID:72010154,chats:[{chatID:"72010154-11992",users:[72010154,11992]}]}
+      {
+        PID:72010154,
+        chatIDs:["11992-72010154"] //"bot-72010154"
+      }
     ];
 }

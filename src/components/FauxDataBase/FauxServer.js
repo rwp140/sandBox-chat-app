@@ -1,6 +1,6 @@
 const userController = require('./FauxUserController');
 const contactsController = require('./FauxContactsController');
-
+const chatController = require('./FauxChatMessageController');
 
 export function test() {
   console.log('test');
@@ -26,6 +26,15 @@ export function get(path,_data){
           break;
           case "/contacts":
             contactsController.GetContacts(_data)
+              .then((val)=>{
+                resolve(val);
+              }).catch((reason)=>{
+                reject(reason);
+              })
+          break;
+          case "/chat":
+            console.log("loading chat");
+            chatController.GetChat(_data)
               .then((val)=>{
                 resolve(val);
               }).catch((reason)=>{

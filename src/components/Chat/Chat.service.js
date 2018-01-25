@@ -1,5 +1,6 @@
 //Imports
 const store = require('../../store');
+const FauxServer = require('../FauxDataBase/FauxServer');
 
 //Exports
 // module.exports ={
@@ -71,9 +72,22 @@ const store = require('../../store');
   }];
 //Functions
   //Public
-  export function LoadChat(ID){
+  export function LoadChat(chatID){
     //route
     //dummy code
+    console.log("getting chat");
+    return new Promise((resolve, reject) =>{
+      FauxServer.get('/chat',chatID)
+        .then((val)=>{
+          console.log('val',val);
+          resolve(val);
+        }).catch((reason)=>{
+          reject(reason);
+        });
+    });
+  }
+  //Private
+  function loadDummyData() {
     let mesagesData = [{SenderName:"System",content:"No messages yet.",direction:"right"}];
     let found = false;
     for(let i=0,l=dummyData.length; i<l&&!found; i++)
@@ -94,4 +108,3 @@ const store = require('../../store');
     }
     return mesagesData;
   }
-  //Private
