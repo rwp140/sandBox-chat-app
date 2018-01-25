@@ -78,7 +78,9 @@ const FauxServer = require('../FauxDataBase/FauxServer');
     return new Promise((resolve, reject) => {
       //set route
       //get route
-      FauxServer.get('/contacts',store.state.PID)
+      let PID = localStorage.PID || store.state.PID
+      console.log("your PID is ",PID);
+      FauxServer.get('/contacts',PID)
         .then((val)=>{
           console.log(val);
           // console.log(testContactsData);

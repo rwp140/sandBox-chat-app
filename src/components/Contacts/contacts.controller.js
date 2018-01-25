@@ -22,7 +22,11 @@ const store = require('../../store');
   */
   function RENDERContactsItem(string){
     console.log(data.Contacts);
-
+    console.log('pid check 1',localStorage.PID);
+    if(store.state.PID)
+      localStorage.PID = store.state.PID;
+    console.log('pid check 2',localStorage.PID);
+    // data.PID = store.state.PID;
     svc.RENDERContactsListGET().then((val)=>{
       // console.log(data.Contacts);
       // console.log(val);
@@ -41,7 +45,10 @@ const store = require('../../store');
 
   }
   function LoadNewChat(event,ID) {
-    svc.LoadChatPage(this.$router,ID);
+    // console.log(store.state.PID);
+    let chatID = ID;//+'-'+store.state.PID;
+    console.log(chatID);
+    svc.LoadChatPage(this.$router,chatID);
   }
   function RenderContactsList() {
 
