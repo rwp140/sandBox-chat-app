@@ -48,5 +48,17 @@ export function get(path,_data){
   // return data_;
 }
 export function post(path,data){
-
+  return new Promise(function(resolve, reject) {
+    switch(path){
+      case "/message":
+        console.log("data:",data);
+        chatController.PostMessage(data.ID,data.message).
+        then((val)=>{
+          reslove(val);
+        }).catch((reason)=>{
+          reject(reason);
+        });
+        break;
+    }
+  });
 }

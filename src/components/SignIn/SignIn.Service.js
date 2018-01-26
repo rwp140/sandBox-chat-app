@@ -20,9 +20,12 @@ const FauxServer = require('../FauxDataBase/FauxServer');
     FauxServer.get('/user',userData)
       .then((_data)=>{
         // console.log("promise");
-        // console.log(_data);
+        console.log(_data);
         // LoadContactsPage(router);
         store.state.PID = _data.pid;
+        localStorage.PID = _data.pid;
+        localStorage.DisplayName = _data.DisplayName;
+
         // console.log(store.state);
         LoadContactsPage(router);
          // _data;

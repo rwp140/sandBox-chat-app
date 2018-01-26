@@ -86,6 +86,15 @@ const FauxServer = require('../FauxDataBase/FauxServer');
         });
     });
   }
+  export function SendMessagePost(_ID,_message){
+    console.log("message",_message);
+    FauxServer.post('/message',{ID:_ID,message:_message})
+      .then((val)=>{
+        console.log(val);
+      }).catch((reason)=>{
+        console.error(reason);
+      });
+  }
   //Private
   function loadDummyData() {
     let mesagesData = [{SenderName:"System",content:"No messages yet.",direction:"right"}];

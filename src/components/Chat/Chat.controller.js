@@ -13,7 +13,7 @@ const store = require('../../store');
   // data.chatID = 0;
   data.messages = [{SenderName:"System",content:"No messages yet.",direction:"right"}];
   data.contacts = ["error name not saved to DB"];
-
+  data.messageOut = "";
 //================================= Function ===================================
 
   //private
@@ -26,6 +26,7 @@ const store = require('../../store');
       //   data.messages = chat.messages;
       //   data.contacts = chat.contacts;
       // }
+      data.messageOut = "";
       svc.LoadChat(this.chatID)
         .then((val)=>{
           // console.log("val got");
@@ -36,7 +37,18 @@ const store = require('../../store');
           console.error(reason);
         });
   }
+  function sendMessage(event){
+    console.log(data.messageOut);
+    let SenderName_ = localStorage.DisplayName;
+    let content_ = data.messageOut;
+    let direction_ ="right";
 
+    // data.messageOut = "";
+
+    let messageOut = {SenderName:SenderName_,content:content_,direction:direction_}
+    console.log("messageOut",messageOut);
+    svc.SendMessagePost(this.chatID,messageOut);
+  }
 //Exports
 module.exports = {
   name: 'Chat',
@@ -47,6 +59,10 @@ module.exports = {
     MessageItem:MessageItem,
     ActionSelection:actionSelection,
     ChatTopBar:chatTopBar
+  },
+  methods:{
+    LoadChat:LoadChat,
+    sendMessage:sendMessage
   },
   props:['chatID'],
   mounted:LoadChat

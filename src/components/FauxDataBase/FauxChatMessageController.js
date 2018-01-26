@@ -18,3 +18,25 @@ export function GetChat(data){
     resolve(chat_);
   });
 }
+export function PostMessage(ID,message){
+  return new Promise((resolve, reject) => {
+    console.log(message);
+    let chatDB = FauxChatMessageDB.Data();
+    // let chat = {};
+    let foundChat = false;
+    for(let i =0,l=chatDB.length; i<l && !foundChat; i++){
+      let chat_ = chatDB[i];
+      let chatID_ = chat_.chatID;
+      if(ID==chatID_){
+        // chat = chat_;
+        chat_.messages.push(message)
+        FauxChatMessageDB.Data()[i].messages.push(message);
+        console.log(chat_);
+        console.log(FauxChatMessageDB.Data()[i]);
+        FauxChatMessageDB.Data()[i] = chat_;
+        console.log(FauxChatMessageDB.Data()[i]);
+        foundChat = true;
+      }
+    }
+  });
+}

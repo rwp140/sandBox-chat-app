@@ -19,7 +19,7 @@ export default {
   props: ['recipients'],
   methods:{
     back:function (){
-      console.log("hey");
+      // console.log("hey");
       this.$router.push({ path: '/contacts' })
     }
   }

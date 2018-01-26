@@ -1,5 +1,5 @@
 <div class="">
-  <chatTopBar :recipients="contacts"/>
+  <chatTopBar :recipients="contacts" />
   <div id = "messages" v-for="(message, index) of messages" :key="message.id">
     <MessageItem :sender="message.SenderName" senderIcon="empty" :content="message.content" :direction="message.direction" style=""/>
     <div id="reciept">
@@ -14,6 +14,6 @@
     </div>
   </div>
   <div class="text-wrapper">
-    <div>[]</div> <input type='text'/>
+    <div></div> <input type='text' v-on:keyup.enter="sendMessage" v-model="messageOut"/>
   </div>
 </div>
