@@ -11,12 +11,15 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
     "build": "node build/build.js",
-    "server":"nodemon server.js"
+    "server": "nodemon server.js"
   },
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
     "express": "^4.16.2",
     "mongo": "^0.1.0",
     "mongoose": "^5.0.1",
+    "morgan": "^1.9.0",
     "vue": "^2.5.13",
     "vue-router": "^3.0.1"
   },
