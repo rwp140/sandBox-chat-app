@@ -41,9 +41,9 @@ const store = require('../../store');
     console.log(data.messageOut);
     let SenderName_ = localStorage.DisplayName;
     let content_ = data.messageOut;
-    let direction_ ="right";
+    let direction_ ="left";
 
-    // data.messageOut = "";
+    data.messageOut = "";
 
     let messageOut = {SenderName:SenderName_,content:content_,direction:direction_}
     console.log("messageOut",messageOut);
