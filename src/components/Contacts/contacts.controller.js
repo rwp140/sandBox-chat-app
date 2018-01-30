@@ -47,6 +47,8 @@ const store = require('../../store');
   function LoadNewChat(event,ID) {
     // console.log(store.state.PID);
     let chatID = ID;//+'-'+store.state.PID;
+    if(ID == 'bot')
+      chatID +='-'+store.state.PID;
     console.log(chatID);
     svc.LoadChatPage(this.$router,chatID);
   }
