@@ -59,4 +59,7 @@ mongoose.connection.on('error', (err) => { //mongo error check
   process.exit();
 });
 
+var api = require("./routes")
+
+app.use('/api', api)
 app.listen(process.env.PORT || 8081)
