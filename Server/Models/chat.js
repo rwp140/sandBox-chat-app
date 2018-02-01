@@ -7,7 +7,7 @@ const chatSchema = new mongoose.Schema({
   contacts:[
     {
       name: String,
-      userID: String,
+      PID: String,
       readLine: Number
     }
   ],
