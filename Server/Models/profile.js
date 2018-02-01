@@ -5,7 +5,8 @@ const mongoose = require('mongoose');
 const profileSchema = new mongoose.Schema({
   name: String,
   PID: String,
-  IconIMG: String
+  IconIMG: String,
+  chats:[String]
 }, {});
 
 //export
