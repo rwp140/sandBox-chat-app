@@ -1,4 +1,4 @@
-// ====================== IMPORTS ==========================================
+// ====================== IMPORTS ==============================================
 const express          = require('express')
 const mongoose         =   require('mongoose');
 const bodyParser       = require('body-parser')
@@ -12,9 +12,9 @@ const cookieParser     =   require('cookie-parser');
 const expressValidator =   require('express-validator');
 const flash            =   require('express-flash');
 
-// ====================== controllers ==========================================
+// ====================== CONTROLLERS ==========================================
 
-// ====================== APLICATION ==========================================
+// ====================== APLICATION ===========================================
 const app = express()
 const isDev = app.get('env') === 'development';
 
