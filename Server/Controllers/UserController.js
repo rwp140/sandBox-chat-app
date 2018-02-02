@@ -9,6 +9,8 @@ exports.CreateNewUser = (req,reg,next) =>{
   //should
     //adds a new user to the DB
     //sends verification request to given email
+
+    next();
 }
 //POST: sign in user
 exports.SignInUser = (req,reg,next) =>{
