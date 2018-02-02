@@ -2,6 +2,7 @@
 
 //POST: new user requires admin token
 exports.CreateNewUser = (req,reg,next) =>{
+<<<<<<< HEAD
 //expects
   //username
   //token
@@ -46,3 +47,21 @@ function SendVerificationRequestFunction() {
 function VerificationCheck() {
 
 }
+=======
+
+}
+//POST: sign in user
+exports.SignInUser = (req,reg,next) =>{
+
+}
+
+//GET: get PID <redundancy>
+exports.GetPID = (req,reg,next) =>{
+
+}
+//GET: Send Forgot Password Form
+
+//GET: Send Verification Request
+
+//verification check
+>>>>>>> 27d45ed1a20d5693ddc55f3c988b65b839f889f8
