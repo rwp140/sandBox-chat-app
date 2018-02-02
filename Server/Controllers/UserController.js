@@ -2,9 +2,13 @@
 
 //POST: new user requires admin token
 exports.CreateNewUser = (req,reg,next) =>{
-//expects
-  //username
-  //token
+  //expects
+    //email
+    //password
+    //token
+  //should
+    //adds a new user to the DB
+    //sends verification request to given email
 }
 //POST: sign in user
 exports.SignInUser = (req,reg,next) =>{
