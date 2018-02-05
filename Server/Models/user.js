@@ -2,12 +2,12 @@
 const mongoose = require('mongoose');
 
 //schema
-const userprofileSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
   userName: String,
   password: String,
   PID: String,
   UserToken: String,
-  verified: Bool
+  verified: Number
 }, {});
 
 /**
@@ -38,6 +38,6 @@ userSchema.methods.comparePassword = function comparePassword(candidatePassword,
  });
 };
 //export
-const Profile = mongoose.model('profile', profileSchema);
+const User = mongoose.model('profile', userSchema);
 
- module.exports = Chat;
+module.exports = User;

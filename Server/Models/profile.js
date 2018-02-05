@@ -12,4 +12,4 @@ const profileSchema = new mongoose.Schema({
 //export
 const Profile = mongoose.model('profile', profileSchema);
 
- module.exports = Chat;
+module.exports = Profile;

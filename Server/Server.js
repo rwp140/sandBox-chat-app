@@ -7,10 +7,10 @@ const cors             = require('cors')
 const morgan           = require('morgan')
 
 const passport         =   require('passport');
-const session          =   require('express-session');
+// const session          =   require('express-session');
 const cookieParser     =   require('cookie-parser');
 const expressValidator =   require('express-validator');
-const flash            =   require('express-flash');
+// const flash            =   require('express-flash');
 
 // ====================== CONTROLLERS ==========================================
 
@@ -29,18 +29,18 @@ const passportConfig = require('./config/passport');
 
 app.use(expressValidator());
 app.use(cookieParser());
-app.use(session({
-  secret: 'sandbox TEST' ,
-  resave: false,
-  saveUninitialized: true,
-  // cookie: {
-  //   secure: true,
-  //   maxAge: new Date(Date.now() + 3600000)
-  // }
-}));
+// app.use(session({
+//   secret: 'sandbox TEST' ,
+//   resave: false,
+//   saveUninitialized: true,
+//   // cookie: {
+//   //   secure: true,
+//   //   maxAge: new Date(Date.now() + 3600000)
+//   // }
+// }));
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(flash());
+// app.use(flash());
 
 
 //database
@@ -50,7 +50,7 @@ var databaseIP = 'mongodb://138.197.133.250:27017';//current mongo db IP
 mongoose.Promise = global.Promise; //synchronize promises
 mongoose.connect(databaseIP, { //conect to mongo dp ip
   //mongo options
-  useMongoClient: true,
+  // useMongoClient: true,
   /* other options */
 });
 mongoose.connection.on('error', (err) => { //mongo error check

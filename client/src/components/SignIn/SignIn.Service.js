@@ -16,7 +16,6 @@ const FauxServer = require('../FauxDataBase/FauxServer');
   //public
   export function SignInUserPost(router,userData){
     // console.log('signing in user');
-
     FauxServer.get('/user',userData)
       .then((_data)=>{
         // console.log("promise");
@@ -31,6 +30,11 @@ const FauxServer = require('../FauxDataBase/FauxServer');
          // _data;
       }).catch((message)=>{
         console.error(message);
+      });
+
+      let route = 'http://localhost:8081/api/user';
+      $.get(route,userData,(_data)=>{
+        console.log(_data);
       });
     // console.log(data);
     // LoadContactsPage(router);
