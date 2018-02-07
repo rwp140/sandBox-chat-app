@@ -2,6 +2,9 @@
 const express = require('express')
 var router = express.Router()
 // ====================== Controllers ==========================================
+const userController = require('./Controllers/user');
+
+
 
 // middleware that is specific to this router
 router.use(function timeLog (req, res, next) {
