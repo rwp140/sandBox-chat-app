@@ -1,15 +1,16 @@
 # chat-app
 
-> sand box chat app
-Chat App project for sandbox education platforms
-Aimed at parents and childern 8-13 and up, to provide a private platform to chat on.
+## sand box chat app
+>Chat App project for sandbox education platforms.
+
+  Aimed at parents and childern 8-13 and up, to provide a private platform to chat on.
 using a series of automated, prompts, deep learning andkeyword tracking this app is 
 intended both to alert parrents of behaviour, and make aprrent how easy it is to track data.
 
-With the intention to provide better socail learning skills, resources, and short term 
+  With the intention to provide better socail learning skills, resources, and short term 
 curriculum to help young students with school, and perpare for a future beyond our own. 
 
-As well as provide interesting interactions such as small games, avatars, and a user profile
+  As well as provide interesting interactions such as small games, avatars, and a user profile
 system that spans Sandbox Platform Aplications.
 
 ## Build Setup
