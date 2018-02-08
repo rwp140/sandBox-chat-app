@@ -45,19 +45,29 @@ router.route('/user')
     console.log('user access requested');
     res.send('user access requested');
   });
-
+  //sign in user
 router.route('/user/SignIN')
   .post(userController.SignInUser);
-
+  //create new user
 router.route('/user/CreateNew')
   .post(userController.CreateNewUser);
 
   //forgot Password
+router.route('/user/ForgotPassword')
+  .get(userController.SendForgotPasswordRequest)
   //forgot users
+router.route('/user/ForgotUser')
+  .get(userController.SendForgotUserNameRequest)
   //update password
+router.route('/user/UpdatePasword')
   //send verification
   //register verification
+router.route('/user/Verification')
+  .post(userController.RegisterVerification)
+  .get(userController.SendVerificationRequest)
   //Get PID
+router.route('/user/PID')
+  .post(userController.GetPID)
 
 // ===== Profile =====
 //POST: new profile; requires admin token
