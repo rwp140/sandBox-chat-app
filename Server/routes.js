@@ -2,7 +2,9 @@
 const express = require('express')
 var router = express.Router()
 // ====================== Controllers ==========================================
-const userController = require('./Controllers/user');
+const userController = require('./Controllers/UserController');
+const chatController = require('./Controllers/chatController');
+const profileController = require('./Controllers/profileController');
 
 
 
@@ -37,11 +39,49 @@ router.post('/Test', function (req, res,next) {
   res.send(message)
 })
 
-
+// ===== users =====
 router.route('/user')
   .get( function (req,res,next) {
     console.log('user access requested');
     res.send('user access requested');
-  })
+  });
+
+router.route('/user/SignIN')
+  .post(userController.SignInUser);
+
+router.route('/user/CreateNew')
+  .post(userController.CreateNewUser);
+
+  //forgot Password
+  //forgot users
+  //update password
+  //send verification
+  //register verification
+  //Get PID
+
+// ===== Profile =====
+//POST: new profile; requires admin token
+
+//GET: get profile
+
+//GET: chat IDS
+
+//POST: new CHAT ID; to relative USERS
+
+// ===== Chat =====
+
+//POST: create New chat
+
+
+//check for chats
+
+
+//GET: chat contacts
+
+
+//GET: chat messages
+
+
+//POST: new chat message
 
 module.exports = router
