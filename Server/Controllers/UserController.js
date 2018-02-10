@@ -1,5 +1,6 @@
 //IMPORTS
 const Core = require('./../Core');
+const userModel = require('../Models/user');
 //POST: new user requires admin token
 exports.CreateNewUser = (req,reg,next) =>{
   //expects
