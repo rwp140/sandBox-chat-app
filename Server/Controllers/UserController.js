@@ -32,21 +32,28 @@ exports.CreateNewUser = (req,reg,next) =>{
     let obj = Core.CheckReq(Expects,req);
     //encode/hash
     console.log(obj);
-
     //store object/model
+    let userData = new userModel({
+      userName:obj.userName,
+      password:obj.password
+    })
     //check for duplicate
-    userModel.findOne({userName:obj.userName},(error,userdoc)=>{
+    .findOne({userName:userData.userName},(error,userdoc)=>{
       if(error){
         console.error("ERROR: ",
         "Error durring find request",
-        "- During user creation "+obj.userName+" was not found.",
+        "- During user creation "+userData.userName+" was not found.",
         "- Either the property is null,",
         "- or There is an issue with the DB.",
-        "Please check all nodes.");
+        "Please check all nodes and poitns of interaction.");
       }
       console.log(userDoc);
       if(userdoc){
-
+        console.error("ERROR: ",
+        "Error durring user creation",
+        "- "+userData.userName+" was found.",
+        "- Either the update the old user,",
+        "- or Check your fields and resubmit.");
       }else{
 
       }
