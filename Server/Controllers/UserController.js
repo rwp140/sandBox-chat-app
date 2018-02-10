@@ -35,8 +35,21 @@ exports.CreateNewUser = (req,reg,next) =>{
 
     //store object/model
     //check for duplicate
-    userModel.findOne({userName:obj.userName},(err,userdoc)=>{
+    userModel.findOne({userName:obj.userName},(error,userdoc)=>{
+      if(error){
+        console.error("ERROR: ",
+        "Error durring find request",
+        "- During user creation "+obj.userName+" was not found.",
+        "- Either the property is null,",
+        "- or There is an issue with the DB.",
+        "Please check all nodes.");
+      }
       console.log(userDoc);
+      if(userdoc){
+
+      }else{
+
+      }
     });
       //establish new model onject
         //send verification
