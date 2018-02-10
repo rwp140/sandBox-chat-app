@@ -10,11 +10,23 @@ exports.CreateNewUser = (req,reg,next) =>{
     //adds a new user to the DB
     //sends verification request to given email
 
+    //test object
+
+    //validate and \escape properties
+
+    //encode/hash
+
+
+    //store object/model
+
+    //send verification
+
     next();
 }
 //POST: sign in user
 exports.SignInUser = (req,reg,next) =>{
-
+  //Test Object
+  //validate and \esxape properties
 }
 //POST: Register Verification
 exports.RegisterVerification = (req,reg,next) =>{
