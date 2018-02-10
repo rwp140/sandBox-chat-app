@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema({
   password: String,
   PID: String,
   UserToken: String,
-  verified: Number
+  verified: Boolean
 }, {});
 
 /**
