@@ -1,5 +1,5 @@
 //IMPORTS
-
+const Core = require('./../Core');
 //POST: new user requires admin token
 exports.CreateNewUser = (req,reg,next) =>{
   //expects
@@ -9,11 +9,21 @@ exports.CreateNewUser = (req,reg,next) =>{
   //should
     //adds a new user to the DB
     //sends verification request to given email
-
+  let Expects =[
+    {
+      name:'Email',
+      Type:'string',
+      Valids:[]
+    },
+    {
+      name:'Email',
+      Type:'string',
+      Valids:[]
+    }
+  ]
     //test object
-
     //validate and \escape properties
-
+    let obj = Core.CheckReq(Expects,req);
     //encode/hash
 
 
