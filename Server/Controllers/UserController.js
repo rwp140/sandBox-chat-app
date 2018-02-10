@@ -14,24 +14,32 @@ exports.CreateNewUser = (req,reg,next) =>{
     {
       name:'Email',
       Type:'string',
-      Valids:[]
+      InValids:[]
     },
     {
-      name:'Email',
+      name:'Password',
       Type:'string',
-      Valids:[]
+      InValids:[]
+    },
+    {
+      name:'Password',
+      Type:'string',
+      InValids:[]
     }
   ]
     //test object
     //validate and \escape properties
     let obj = Core.CheckReq(Expects,req);
     //encode/hash
-
+    console.log(obj);
 
     //store object/model
-
-    //send verification
-
+    //check for duplicate
+    userModel.findOne({userName:obj.userName},(err,userdoc)=>{
+      console.log(userDoc);
+    });
+      //establish new model onject
+        //send verification
     next();
 }
 //POST: sign in user
