@@ -5,11 +5,10 @@ const mongoose = require('mongoose');
 const userSchema = new mongoose.Schema({
   userName: String,//key
   password: String,
-  PID: String,
+  ProfileID: String,
   UserToken: String,
   verified: Boolean
-}, {});
-
+}, { timestamps: true });
 /**
   * Password hash middleware.
   */
@@ -38,6 +37,6 @@ userSchema.methods.comparePassword = function comparePassword(candidatePassword,
  });
 };
 //export
-const User = mongoose.model('profile', userSchema);
+const User = mongoose.model('User', userSchema);
 
 module.exports = User;

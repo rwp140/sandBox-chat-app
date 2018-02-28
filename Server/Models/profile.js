@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 //schema
 const profileSchema = new mongoose.Schema({
   name: String,
-  PID: String,
+  ProfileID: String,
   IconIMG: String,
   chats:[String]
 }, {});
