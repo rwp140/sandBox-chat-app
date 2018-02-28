@@ -10,3 +10,7 @@ module.exports= {
     state[value] = '';
   }
 }
+
+
+//needs review and better set up
+//needs interaction with lcoal storage, and ecetera to allow for better persistent storage
